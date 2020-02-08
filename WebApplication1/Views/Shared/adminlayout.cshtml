@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <script src="~/Scripts/JavaScript.js"></script>
+    <script src="~/Scripts/jquery-3.2.1.min.js"></script>
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<body>
+    <button onclick="topFunction()" id="myBtn" type="button"><i class="fa fa-arrow-up"></i></button>
+    <div id="HeaderMenuUstuAlani">
+        <div id="HeaderMenuUstuSinirlamaAlani">
+            <header style="float:left;margin-left:43%;color:white;text-align:center;">
+                TeknoBileşen - Laptop Kategorisi
+            </header>
+            <ul id="HeaderMenuUstuSeceneklerAlani"></ul>
+        </div>
+    </div>
+    <center>
+        <div class="example"><img src="~/img/logo_transparent.png" style="  width: 100%;  max-width: 300px;  height: 20%;" /></div>
+    </center>
+    <ul class="topnav">
+        <li><a href="~/Admin/Index">Anasayfa</a></li>
+        <li><a href="~/Admin/UrunEkle">Ürün Ekle</a></li>
+        <li><a href="~/Admin/UrunOzellikEkle">Ürün Özellik Ekle</a></li>
+        <li><a href="~/Admin/UrunCikar">Ürün Çıkar</a></li>
+        <li class="right"><a href="~/Home/Index" target="_top">Çıkış</a></li>
+        <li class="right"><a>Admin</a></li>
+
+    </ul>
+
+    <center>
+
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - Tekno Bileşen Laptop Kategorileri</p>
+            </footer>
+        </div>
+    </center>
+    <script type="text/javascript">
+        //gototop
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>

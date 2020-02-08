@@ -1,0 +1,70 @@
+﻿@using WebApplication1.Service;
+@{
+    ViewBag.Title = "Siparislerim";
+    Service servis = new Service();
+    if (Session["kullanici_id"] == null)
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/kullanicilayout.cshtml";
+    }
+}
+<html>
+<head>
+
+</head>
+<body>
+    <div style="padding:0 16px;">
+        <input type="text" id="myInput" onkeyup="myFunction1()" placeholder="Sipariş Numaranız" title="Type in a name">
+
+        <table id="myTable">
+            <tr class="header">
+                <th>Sipariş ID</th>
+                <th>Kullanıcı Adı</th>
+                <th>Sipariş Durumu</th>
+                <th></th>
+            </tr>
+            @if (Session["kullanici_id"] == null)
+            {
+                foreach (var item in servis.Siparislerim("user"))
+                {
+                    <tr id="@item.siparis_id">
+                        <td>@item.siparis_id</td>
+                        <td>@item.kullanici_id</td>
+                        <td>@item.kullanici_siparisdurumu</td>
+                        <td><button class="button" type="button" onclick="siparisurunleri(@item.siparis_id)" style="background-color:black">Ürünleri Görüntüle</button></td>
+                    </tr>
+                }
+            }
+            else
+            {
+                foreach (var item in servis.Siparislerim(Session["kullanici_id"].ToString()))
+                {
+                    <tr id="@item.siparis_id">
+                        <td>@item.siparis_id</td>
+                        <td>@item.kullanici_id</td>
+                        <td>@item.kullanici_siparisdurumu</td>
+                        <td><button class="button" type="button" onclick="siparisurunleri(@item.siparis_id)" style="background-color:black">Ürünleri Görüntüle</button></td>
+                    </tr>
+                }
+            }
+        </table>
+        <br />
+        
+        <div id="siparisurunlerimodal" class="w3-modal">
+            <div class="w3-modal-content w3-card-4">
+                <header class="w3-container w3-teal">
+                    <span onclick="document.getElementById('siparisurunlerimodal').style.display='none'"
+                          class="w3-button w3-display-topright">&times;</span>
+                    <h2>ÜRÜNLER</h2>
+                </header>
+                <br />
+                <table class="w3-container" id="urunleralani"></table>
+                <br />
+            </div>
+        </div>
+</body>
+</html>
+

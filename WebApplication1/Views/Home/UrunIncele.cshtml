@@ -1,0 +1,253 @@
+﻿@using WebApplication1.Service;
+@{
+    ViewBag.Title = "UrunIncele";
+    if (Session["kullanici_id"] == null)
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/kullanicilayout.cshtml";
+    }
+    Service servis = new Service();
+    var id = Session["urun_id"];
+}
+
+<html>
+<head>
+
+</head>
+<body>
+    <div style="padding:0 16px;">
+        <div id="UrunDetaySayfalariResimUrunBaslikFiyatVeIslemAlanlari">
+            @{WebApplication1.Models.Urun urun = new WebApplication1.Models.Urun();
+                urun = servis.UrunAra2(Convert.ToInt32(id));
+                try
+                {
+                    var urunozellik = servis.UrunOzellikAra(Convert.ToInt32(id));
+                    <div id="UrunDetaySayfalariResimlerAlani">
+                        <div id="UrunDetaySayfalariBuyukResimAlani">
+                            <div id="UrunDetaySayfalariBuyukResimDisCercevesi">
+                                <img id="BuyukResim" src="@Url.Content(urun.urun_resim)" border="0" alt="" title="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="UrunDetaySayfalariBaslikVeIslemlerAlani">
+                        <div id="UrunDetaySayfalariUrunBasligiAlani">
+                            @urun.urun_modeladi
+                        </div>
+                        <div id="UrunDetaySayfalariUrunMarkasiAlani">
+                            @urun.urun_markaadi
+                        </div>
+
+                        <div id="UrunDetaySayfalariPaylasVeSepeteEkleButonlariAlani">
+
+                            <div id="UrunDetaySayfalariSepeteEkleButonuAlani">
+                                <span id="UrunDetaySayfalariSepeteEkleButonuIconu"><img src="~/img/SepetBeyaz21x20.png" border="0" alt="" title=""></span><span id="UrunDetaySayfalariSepeteEkleButonuMetni" onclick="sepeteekle(@urun.urun_id)">Sepete Ekle</span>
+                            </div>
+                        </div>
+
+                        <div id="UrunDetaySayfalariUrunVaryantVeFiyatAlani">
+                            @if (urun.urun_indirimfiyati == "null")
+                            {
+                                <div id="UrunDetaySayfalariUrunFiyatlandirmaAlani">
+                                    <span class="UrunDetaySayfasiUrunFiyatiAlani">
+                                        @urun.urun_fiyati
+                                    </span>
+                                </div>
+                            }
+                            else
+                            {
+
+                                <div id="UrunDetaySayfalariUrunFiyatlandirmaAlani">
+                                    <span class="UrunDetaySayfasiUrunFiyatiAlani">
+                                        @urun.urun_indirimfiyati TL
+                                    </span>
+                                    <span class="UrunDetaySayfasiUrunFiyatiAlani">
+                                        <del>@urun.urun_fiyati TL</del>
+                                    </span>
+                                </div>
+                            }
+
+                        </div>
+                        <div id="UrunDetaySayfalariUrununBankaHavalesiDetayAlani">
+                            <div id="UrunDetaySayfalariUrununBankaHavalesiResimAlani">
+                                <span class="f1 fa fa-star checked">
+</div>
+                            <div id="UrunDetaySayfalariUrununBankaHavalesiMetni">
+                                Ürünü Puanla
+                                <span id="rating_bar">
+                                <span onclick="yildizla(1,@urun.urun_id)" class="f1 fa fa-star"></span>
+                                <span onclick="yildizla(2,@urun.urun_id)" class="f1 fa fa-star"></span>
+                                <span onclick="yildizla(3,@urun.urun_id)" class="f1 fa fa-star"></span>
+                                <span onclick="yildizla(4,@urun.urun_id)" class="f1 fa fa-star"></span>
+                                <span onclick="yildizla(5,@urun.urun_id)" class="f1 fa fa-star"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div id="UrunDetaySayfalariUrununKargoIslemleriDetayAlani">
+                            <div id="UrunDetaySayfalariUrununKargoIslemleriResimAlani">
+                                <img src="~/img/SaatEsnetikGri20x20.png" border="0" alt="" title="">
+                            </div>
+                            <div id="UrunDetaySayfalariUrununKargoIslemleriMetni">
+                                Sipariş En Geç 10 Şubat 2018 Tarihinde Kargoya Verilecektir.
+                            </div>
+                        </div>
+
+                        <div id="UrunDetaySayfalariUrununHizliGonderiDetayAlani">
+                            <div id="UrunDetaySayfalariUrununHizliGonderiResimAlani">
+                                <img src="~/img/SaatHizCizgiliLacivert20x20.png" border="0" alt="" title="">
+                            </div>
+                            <div id="UrunDetaySayfalariUrununHizliGonderiMetni">
+                                İlgili Ürün Süper Hızlı Gönderi Kapsamındadır. Aynı Gün Teslimat Olabilir.
+                            </div>
+                        </div>
+
+                        <div id="UrunDetaySayfalariUrununKrediKartiDetayAlani">
+                            <div id="UrunDetaySayfalariUrununKrediKartiResimAlani">
+                                <img src="~/img/KrediKarti20x20.png" border="0" alt="" title="">
+                            </div>
+                            <div id="UrunDetaySayfalariUrununKrediKartiMetni">
+                                Tüm bankaların kredi kartları ile peşin yada, Axess, Bonus, Cardfinans, Maximum, Paraf veya World markalı kartlar için 9 taksite kadar ödeme seçeneği.
+                            </div>
+                        </div>
+
+                        <div id="UrunDetaySayfalariUrununMobilOdemeDetayAlani">
+                            <div id="UrunDetaySayfalariUrununMobilOdemeResimAlani">
+                                <img src="~/img/Mobil20x20.png" border="0" alt="" title="">
+                            </div>
+                            <div id="UrunDetaySayfalariUrununMobilOdemeMetni">
+                                Türk Telekom, Turkcell veya Vodafone telefon hatlarından mobil ödeme seçeneği.
+                            </div>
+                        </div>
+
+                        <div id="UrunDetaySayfalariUrununBankaHavalesiDetayAlani">
+                            <div id="UrunDetaySayfalariUrununBankaHavalesiResimAlani">
+                                <img src="~/img/Banka20x20.png" border="0" alt="" title="">
+                            </div>
+                            <div id="UrunDetaySayfalariUrununBankaHavalesiMetni">
+                                Tüm bankalardan havaye veya EFT ile ödeme seçeneği.
+                            </div>
+                        </div>
+                        <br /><br /><br /><br /><br />
+                        <a href="#" id="UrunDetaySayfalariUrununBankaHavalesiDetayAlani" type="button" onclick="karsilastir(@urun.urun_id)">
+                            <div id="UrunDetaySayfalariUrununBankaHavalesiResimAlani">
+                                <img src="~/img/karsilastir.png" border="0" alt="" title="">
+                            </div>
+                            <div id="UrunDetaySayfalariUrununBankaHavalesiMetni">
+                                Karşılaştır
+                            </div>
+                        </a>
+                    </div>
+
+                    <div id="UrunDetaySayfalariUrununAciklamaAlani">
+                        <div id="UrunDetaySayfalariUrununAciklamaBaslikMetni">
+                            Ürün Özellikleri
+                        </div>
+                        <div id="UrunDetaySayfalariUrununAciklamaIcerikMetni" style="font-size:20px;font-weight:bold">
+                            <table>
+                                <tr>
+                                    <th style="width:500px">Özellik</th>
+                                    <th style="width:500px">Özellik Adı</th>
+                                </tr>
+                                @for (int i = 0; i < urunozellik.Count(); i++)
+                                {
+                                    <tr>
+                                        <th style="width:500px">@urunozellik[i].urun_ozellikadi </th>
+                                        <th style="width:500px"> @urunozellik[i].urun_ozellik</th>
+                                    </tr>
+                                }
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="UrunDetaySayfalariUrununYorumlariAlani">
+                        <div id="UrunDetaySayfalariUrununYorumlariBaslikMetni">
+                            Yorumlar
+                        </div>
+                        <div class="UrunDetaySayfalariUrununYorumlariIcerikMetni">
+                            yorum1
+                        </div>
+                    </div>
+                }
+                catch
+                {
+                    <div id="TamSayfaCerceveSinirlamaAlani">
+                        <div id="TamSayfaCerceveAlaniIciYuzdeYuzlukAlan">
+                            <div class="TamSayfaCerceveAlaniIciAltiCizgiliBaslikAlani">
+                                <div class="TamSayfaCerceveAlaniIciAltiCizgiliBaslikAlaniUstBaslikMetni" style="color:#08C">
+                                    Hata
+                                </div>
+                                <div class="TamSayfaCerceveAlaniIciAltiCizgiliBaslikAlaniAltBaslikMetni">
+                                    Ürün Bulunamadı.
+                                </div>
+                            </div>
+
+                            <div id="TamSayfaCerceveAlaniIciBosVerilerIcinBilgiAlani">
+                                <div id="TamSayfaCerceveAlaniIciBosVerilerIcinIslemIconuAlani">
+                                    <img src="~/img/Bilinmiyor.png" border="0" alt="" title="">
+                                </div>
+                                <div id="TamSayfaCerceveAlaniIciBosVerilerIcinBaslikAlani">
+                                    Ürün Bulunmuyor!
+                                </div>
+                                <div id="TamSayfaCerceveAlaniIciBosVerilerIcinIcerikAlani">
+                                    Herhangi bir ürün bulunmamaktadır. Sitemizdeki ürünleri inceleyerek, ihtiyacınız olan ürün veya ürünleri alışveriş sepetinize ekleyerek hemen alışverişe başlayabilirsiniz. Ana sayfaya dönmek için lütfen <a href="~/Home/index" target="_top">buraya tıklayınız</a>.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+
+        </div>
+        <div id="karsilastir" class="w3-modal">
+            <div class="w3-modal-content w3-card-4">
+                <header class="w3-container w3-teal">
+                    <h3>TechnoBileşen</h3>
+                </header>
+                <img src="~/img/true.jfif" style="width:50px;height:50px" />
+                <br />
+                <h3 class="w3-container" id="karsilastirmaalani"></h3>
+                <header class="w3-container w3-teal" style="width:100%;">
+                    <br />
+                    <a href="#" onclick="document.getElementById('karsilastir').style.display='none'"
+                       class="w3-button w3-display-topright" style="color:white;text-decoration:none;padding:10px;font-size:20px">
+                        Çık
+                    </a>
+                    <a href="~/Home/UrunKarsilastir" onclick="document.getElementById('karsilastir').style.display='none'"
+                       class="w3-button w3-display-topright" style="color:white;text-decoration:none;padding:10px;font-size:20px">
+                        Karşılaştırmaya Git
+                    </a>
+                    <br />
+                    <br />
+                </header>
+            </div>
+        </div>
+        <div id="sepetmodal" class="w3-modal">
+            <div class="w3-modal-content w3-card-4">
+                <header class="w3-container w3-teal">
+                    <h3>TechnoBileşen</h3>
+                </header>
+                <img src="~/img/true.jfif" style="width:50px;height:50px" />
+                <br />
+                <h3 class="w3-container" id="sepetalani"></h3>
+                <header class="w3-container w3-teal" style="width:100%;">
+                    <br />
+                    <a href="#" onclick="document.getElementById('sepetmodal').style.display='none'"
+                       class="w3-button w3-display-topright" style="color:white;text-decoration:none;padding:10px;font-size:20px">
+                        Çık
+                    </a>
+                    <a href="~/Home/AlisverisSepeti" onclick="document.getElementById('sepetmodal').style.display='none'"
+                       class="w3-button w3-display-topright" style="color:white;text-decoration:none;padding:10px;font-size:20px">
+                        Sepete Git
+                    </a>
+                    <br />
+                    <br />
+                </header>
+            </div>
+        </div>
+    </div>
+    <br /><br />
+</body>
+</html>

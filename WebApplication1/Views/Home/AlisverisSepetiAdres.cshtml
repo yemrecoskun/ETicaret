@@ -1,0 +1,138 @@
+﻿
+@{
+    ViewBag.Title = "AlisverisSepetiAdres";
+    if (Session["kullanici_id"] == null)
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/kullanicilayout.cshtml";
+    }
+    int adet = (Convert.ToInt32(Session["adet"]));
+}
+<html>
+<head>
+
+</head>
+<body>
+    <div style="padding:0 16px;">
+        @if (Session["adet"] == null || Session["adet"] == "0")
+        {
+            <div id="TamSayfaCerceveAlani">
+                <div id="TamSayfaCerceveSinirlamaAlani">
+                    <div id="TamSayfaCerceveAlaniIciYuzdeYuzlukAlan">
+                        <div class="TamSayfaCerceveAlaniIciAltiCizgiliBaslikAlani">
+                            <div class="TamSayfaCerceveAlaniIciAltiCizgiliBaslikAlaniUstBaslikMetni" style="color:#08C">
+                                Alışveriş Sepeti
+                            </div>
+                            <div class="TamSayfaCerceveAlaniIciAltiCizgiliBaslikAlaniAltBaslikMetni">
+                                Alışveriş sepetine eklemiş olduğun herhangi bir ürün bulunmamaktadır.
+                            </div>
+                        </div>
+
+                        <div id="TamSayfaCerceveAlaniIciBosVerilerIcinBilgiAlani">
+                            <div id="TamSayfaCerceveAlaniIciBosVerilerIcinIslemIconuAlani">
+                                <img src="~/img/Bilinmiyor.png" border="0" alt="" title="">
+                            </div>
+                            <div id="TamSayfaCerceveAlaniIciBosVerilerIcinBaslikAlani">
+                                Alışveriş Sepetinde Ürün Bulunmuyor!
+                            </div>
+                            <div id="TamSayfaCerceveAlaniIciBosVerilerIcinIcerikAlani">
+                                Alışveriş sepetinizde herhangi bir ürün bulunmamaktadır. Sitemizdeki ürünleri inceleyerek, ihtiyacınız olan ürün veya ürünleri alışveriş sepetinize ekleyerek hemen alışverişe başlayabilirsiniz. Ana sayfaya dönmek için lütfen <a href="~/Home/index" target="_top">buraya tıklayınız</a>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div id="TamSayfaCerceveAlani">
+                <div id="TamSayfaCerceveSinirlamaAlani">
+
+                    <div id="TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiSolAlan">
+                        <div class="TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliBaslikAlani">
+                            <div class="TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliBaslikAlaniUstBaslikMetni" style="color:#08C">
+                                Alışveriş Sepeti
+                            </div>
+                            <div class="TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliBaslikAlaniAltBaslikMetni">
+                                Fatura ve iletişim bilgilerini aşağıdan belirtebilirsin.
+                            </div>
+                            <div>
+
+                                <div class="TamSayfaCerceveAlaniIciFormElemanlariBaslikMetni">İSİM</div>
+                                <div class="TamSayfaCerceveAlaniIciFormElemanlariIcinSatirAlani"><input name="FirmaUnvani" type="text" class="FormElemanlariTextInputlari" tabindex="1" style="width:100%"></div>
+
+                                <div class="TamSayfaCerceveAlaniIciFormElemanlariBaslikMetni">SOYİSİM</div>
+                                <div class="TamSayfaCerceveAlaniIciFormElemanlariIcinSatirAlani"><input name="FirmaVergiDairesi" type="text" class="FormElemanlariTextInputlari" tabindex="2" style="width:100%"></div>
+
+                                <div class="TamSayfaCerceveAlaniIciFormElemanlariBaslikMetni">CEP TELEFON</div>
+                                <div class="TamSayfaCerceveAlaniIciFormElemanlariIcinSatirAlani"><input name="FirmaVergiNumarasi" type="text" class="FormElemanlariTextInputlari" tabindex="3" style="width:100%"></div>
+
+
+                                <div class="TamSayfaCerceveAlaniIciFormElemanlariBaslikMetni">Açık Adres(Nikametgah Adresi)</div>
+                                <div class="TamSayfaCerceveAlaniIciFormElemanlariIcinSatirAlani"><textarea name="Mesaj" class="FormElemanlariTextArealari" tabindex="6" style="width:100%;height:100px;"></textarea></div>
+
+                                <center><div class="ButonlarIcinKapsamaAlani"><input type="submit" value="Adresi Kaydet" class="FormElemanlariYesilButonlar" tabindex="7" style="background-color:#08C;color:white"></div></center>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiSagAlan">
+                        <div class="TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliSagBaslikAlani">
+                            <div class="TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliSagBaslikAlaniUstBaslikMetni" style="color:#08C">
+                                Sipariş Özeti
+                            </div>
+                            <div class="TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliSagBaslikAlaniAltBaslikMetni">
+                                Toplam @adet Adet Ürün.
+                            </div>
+                        </div>
+
+
+
+                        <div class="TamSayfaCerceveAlaniIciAlisverisSepetiUrunlerToplamiKDVDahilBaslikAlani">Ürünler Toplamı </div>
+                        <div class="TamSayfaCerceveAlaniIciAlisverisSepetiUrunlerToplamiKDVDahilRakamAlani">@Session["toplamfiyat"] TL</div>
+
+                        <div class="TamSayfaCerceveAlaniIciAlisverisSepetiIndirimlerToplamiKDVDahilBaslikAlani">İndirimler Toplamı </div>
+                        <div class="TamSayfaCerceveAlaniIciAlisverisSepetiIndirimlerToplamiKDVDahilRakamAlani">@Session["indirimfiyat"] TL</div>
+
+                        <div class="TamSayfaCerceveAlaniIciAlisverisSepetiUrunlerToplamiKDVDahilBaslikAlani">KDV Toplamı</div>
+                        <div class="TamSayfaCerceveAlaniIciAlisverisSepetiUrunlerToplamiKDVDahilRakamAlani">@Session["KDV"] TL</div>
+                        <div class="TamSayfaCerceveAlaniIciAlisverisSepetiOdenecekTutarBaslikAlani">Ödenecek Tutar (KDV Dahil)</div>
+                        <div class="TamSayfaCerceveAlaniIciAlisverisSepetiOdenecekTutarRakamAlani">@Session["odenecektutar"] TL</div>
+
+                        <div class="TamSayfaCerceveAlaniIciAlisverisSepetiSiparisOzetiIciButonAlani" style="background-color:#08C">
+                            <a href="#" onclick="alisverisitamamla()" target="_top"><span class="TamSayfaCerceveAlaniIciAlisverisSepetiSiparisOzetiIciButonuIconu"><img src="~/img/SepetBeyaz21x20.png" border="0" alt="" title=""></span><span class="TamSayfaCerceveAlaniIciAlisverisSepetiSiparisOzetiIciButonuMetni">Alışverişi Tamamla</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        <div id="alisverismsg" class="w3-modal">
+            <div class="w3-modal-content w3-card-4">
+                <header class="w3-container w3-teal">
+                    <h3>TechnoBileşen</h3>
+                </header>
+                <img src="~/img/true.jfif" style="width:50px;height:50px" />
+                <br />
+                <h3 class="w3-container"> ALIŞVERİŞ TAMAMLANDI</h3>
+                <h3 class="w3-container" id="alisveris_id"> </h3>
+                <header class="w3-container w3-teal" style="width:100%;">
+                    <br />
+                    <a href="#" onclick="document.getElementById('karsilastir').style.display='none'"
+                       class="w3-button w3-display-topright" style="color:white;text-decoration:none;padding:10px;font-size:20px">
+                        Çık
+                    </a>
+                    <a href="~/Home/Siparislerim" onclick="document.getElementById('karsilastir').style.display='none'"
+                       class="w3-button w3-display-topright" style="color:white;text-decoration:none;padding:10px;font-size:20px">
+                        Siparişlerime Git
+                    </a>
+                    <br />
+                    <br />
+                </header>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

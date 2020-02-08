@@ -1,0 +1,89 @@
+﻿@using WebApplication1.Service;
+@{
+    Service servis = new Service();
+    ViewBag.Title = "UrunCikar";
+    Layout = "~/Views/Shared/adminlayout.cshtml";
+}
+
+<html>
+<head>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-3.2.1.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div style="padding:0 16px;">
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Ürün İd veya Ürün Adı ARA..." title="Type in a name">
+
+        <table id="myTable">
+            <tr class="header">
+                <th>Ürün ID</th>
+                <th>Ürün Resim</th>
+                <th>Ürün İsmi</th>
+                <th></th>
+                <th></th>
+            </tr>
+            @foreach (var item in servis.Urun_Sorgula())
+            {
+                <tr id="@item.Key.urun_id">
+                    <td>@item.Key.urun_id</td>
+                    <td><img src="@Url.Content(item.Key.urun_resim)" style="width:75px;height:75px" /></td>
+                    <td>@item.Key.urun_markaadi  @item.Key.urun_modeladi</td>
+                    <td><button class="sil" type="button" onclick="urunozellikleri(@item.Key.urun_id)" style="background-color:black">ÖZELLİKLER</button></td>
+                    <td><button class="sil" type="button" onclick="ozellikekleurun(@item.Key.urun_id)" style="background-color:black">ÖZELLİK EKLE</button></td>
+                </tr>
+            }
+        </table>
+        <br />
+        <form id="formkazanim" class="container" style="display:none">
+            <div class="row">
+                <br /><br />
+                <h3>ÖZELLİK EKLE</h3>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div id="kazanimform">
+                        <div class="form-group">
+                            <label for="k_turu_id">Ürün ID</label>
+                            <input type="text" class="form-control" id="urun_id" disabled="disabled" name="urun_id" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="k_adi">Özellik</label>
+                            <select class="form-control" id="urun_ozellikadi" name="urun_ozellikadi" required>
+                                @foreach (var item in servis.OzellikListesi())
+                                {
+
+                                    <option>@item.urun_ozellikadi</option>
+
+                                }
+                            </select>
+                            <a onclick="document.getElementById('newozellik').style.display='block'"><i class="fa fa-plus"></i></a>
+                        </div>
+                        <div class="form-group" id="newozellik" style="display:none">
+                            <label for="k_D">Yeni Özellik</label>
+                            <input type="text" class="form-control" id="urun_ozellikadi1" name="urun_ozellikadi1" value="" placeholder="RAM,İşletim Sistemi,...vs" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="k_adi">Özellik</label>
+                            <input type="text" class="form-control" id="urun_ozellik" name="urun_ozellik" placeholder="2GB,Freedos,...vs" required />
+                        </div>
+                        <div class="form-check">
+                            <button type="submit" class="btn btn-primary" style="width:100%" id="eklebtn" onclick="ozellikekle()"><b>+</b> Ekle</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div id="id01" class="w3-modal">
+            <div class="w3-modal-content w3-card-4">
+                <header class="w3-container w3-teal">
+                    <span onclick="document.getElementById('id01').style.display='none'"
+                          class="w3-button w3-display-topright">&times;</span>
+                    <h2>ÖZELLİKLER</h2>
+                </header>
+                <br />
+                <table class="w3-container" id="ozellikleralani"></table>
+                <br />
+            </div>
+        </div>
+    </div>
+</body>
+</html>

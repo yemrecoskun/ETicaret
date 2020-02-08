@@ -1,0 +1,115 @@
+﻿@using WebApplication1.Service
+@{
+    ViewBag.Title = "Laptop";
+    if (Session["kullanici_id"] == null)
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/kullanicilayout.cshtml";
+    }
+    Service servis = new Service();
+}
+
+<html>
+<head>
+
+</head>
+<body>
+    <div style="padding:0 16px;">
+        <div id="TamSayfaYeniUrunlerAlani">
+            <div id="TamSayfaYeniUrunlerBaslikAlani">Tüm Ürünler</div>
+            @foreach (var item in servis.TumUrunler())
+            {
+                <div class="columns">
+                    <ul class="price">
+                        @*<div class="price1">*@
+                        <li><img src=@Url.Content(item.Key.urun_resim) style="width:100%;height:200px"></li>
+                        <li class="header" id="urun_id"><div>@item.Key.urun_markaadi </div><div> @item.Key.urun_modeladi </div> </li>
+                        @if (item.Key.urun_indirimfiyati == "null")
+                        {
+                            <li class="header">@item.Key.urun_fiyati <i class="fa fa-try"></i></li>
+                        }
+                        else
+                        {
+                            <li class="header"><del>@item.Key.urun_fiyati <i class="fa fa-try"></i></del> - @item.Key.urun_indirimfiyati <i class="fa fa-try"></i></li>
+                        }
+                        <li class="header" @*id="rating_bar"*@>
+                            @for (int i = 0; i < (int)item.Value.ortalama; i++)
+                            {
+                                <span class="f1 fa fa-star checked"></span>
+
+
+                            }
+                            @if ((int)item.Value.ortalama != item.Value.ortalama)
+                            {
+                                <span class="f1 fa fa-star-half-o checked"></span>
+                            }
+                            @for (int i = 1; i <= 5 - item.Value.ortalama; i++)
+                            {
+                                <span class="f4 fa fa-star-o checked"></span>
+                            }
+                        </li>
+                        @*</div>*@
+
+                        @*<div class="price2">*@
+                        <li class="grey"><button class="button" onclick="urunincele(@item.Key.urun_id)" style="color:white">Ürünü İncele</button></li>
+                        <li class="grey"><button class="button" onclick="sepeteekle(@item.Key.urun_id)" style="color:white">Sepete Ekle</button></li>
+                        <li class="grey"><button class="button" onclick="karsilastir(@item.Key.urun_id)" style="color:white">Karşılaştır</button></li>
+                        @*</div>*@
+                    </ul>
+                </div>
+            }
+
+        </div>
+        <div id="sepetmodal" class="w3-modal">
+            <div class="w3-modal-content w3-card-4">
+                <header class="w3-container w3-teal">
+                    <h3>TechnoBileşen</h3>
+                </header>
+                <img src="~/img/true.jfif" style="width:50px;height:50px" />
+                <br />
+                <h3 class="w3-container" id="sepetalani"></h3>
+                <header class="w3-container w3-teal" style="width:100%;">
+                    <br />
+                    <a href="#" onclick="document.getElementById('sepetmodal').style.display='none'"
+                       class="w3-button w3-display-topright" style="color:white;text-decoration:none;padding:10px;font-size:20px">
+                        Çık
+                    </a>
+                    <a href="~/Home/AlisverisSepeti" onclick="document.getElementById('sepetmodal').style.display='none'"
+                       class="w3-button w3-display-topright" style="color:white;text-decoration:none;padding:10px;font-size:20px">
+                        Sepete Git
+                    </a>
+                    <br />
+                    <br />
+                </header>
+            </div>
+        </div>
+        <div id="karsilastir" class="w3-modal">
+            <div class="w3-modal-content w3-card-4">
+                <header class="w3-container w3-teal">
+                    <h3>TechnoBileşen</h3>
+                </header>
+                <img src="~/img/true.jfif" style="width:50px;height:50px" />
+                <br />
+                <h3 class="w3-container" id="karsilastirmaalani"></h3>
+                <header class="w3-container w3-teal" style="width:100%;">
+                    <br />
+                    <a href="#" onclick="document.getElementById('karsilastir').style.display='none'"
+                       class="w3-button w3-display-topright" style="color:white;text-decoration:none;padding:10px;font-size:20px">
+                        Çık
+                    </a>
+                    <a href="~/Home/UrunKarsilastir" onclick="document.getElementById('karsilastir').style.display='none'"
+                       class="w3-button w3-display-topright" style="color:white;text-decoration:none;padding:10px;font-size:20px">
+                        Karşılaştırmaya Git
+                    </a>
+                    <br />
+                    <br />
+                </header>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,63 @@
+﻿@using WebApplication1.Service;
+@{
+    Service servis = new Service();
+    ViewBag.Title = "UrunEkle";
+    Layout = "~/Views/Shared/adminlayout.cshtml";
+}
+<html>
+<head>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-3.2.1.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    @using (Html.BeginForm("UrunEkle", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <form id="formkazanim" class="container">
+            <div class="row">
+                <br /><br />
+                <h3>Ürün Ekle</h3>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div id="kazanimform">
+                        <div class="form-group">
+                            <label for="k_t_adi">ÜRÜN ADI</label>
+                            <select style="height:100%!important" class="form-control" id="urun_adi" name="urun_adi" required>
+                                <option selected value="Seçiniz">Seçiniz</option>
+                                <option value="Laptop">Laptop</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="k_t_adi">MARKA ADI</label>
+                            <select style="height:100%!important" class="form-control" id="urun_markaadi" name="urun_markaadi" required>
+                                <option selected value="Seçiniz">Seçiniz</option>
+                                @foreach (var item in servis.MarkaListele())
+                                {
+                                    if (item.urun_adi == "laptop")
+                                    {
+                                        <option value="@item.urun_markaid">@item.urun_markaadi</option>
+                                    }
+                                }
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="k_turu_id">Model Adı</label>
+                            <input type="text" class="form-control" id="urun_modeladi" name="urun_modeladi" placeholder="Ürünün Modeli" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="k_adi">Ürün Fiyatı</label>
+                            <input type="number" class="form-control" id="urun_fiyati" name="urun_fiyati" placeholder="Ürünün Fiyatı ₺" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="k_adi">Ürüne Ait Resim</label>
+                            <input type="file" class="form-control" id="urun_resim" name="urun_resim" required />
+                        </div>
+                        <div class="form-check">
+                            <button type="submit" class="btn btn-primary" style="width:100%" id="eklebtn"><b>+</b> Ekle</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    }
+</body>
+</html>

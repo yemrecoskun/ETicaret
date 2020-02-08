@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "Hesabim";
+    if (Session["kullanici_id"] == null)
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/kullanicilayout.cshtml";
+    }
+    var id = Session["kullanici_id"];
+}
+<html>
+<body>
+
+</body>
+<head>
+    <div style="padding:0 16px;">
+        <div id="TamSayfaCerceveAlani">
+            <div id="TamSayfaCerceveSinirlamaAlani">
+                <div id="TamSayfaCerceveAlaniIciYuzdeEllilikSolAlan">
+                    <div class="TamSayfaCerceveAlaniIciAltiCizgiliBaslikAlani">
+                        <div class="TamSayfaCerceveAlaniIciAltiCizgiliBaslikAlaniUstBaslikMetni">
+                            Hesabım &#8250; Üyelik Bilgileri
+                        </div>
+                        <div class="TamSayfaCerceveAlaniIciAltiCizgiliBaslikAlaniAltBaslikMetni">
+                            Aşağıdan üyelik bilgilerini görüntüleyebilir veya güncelleyebilirsin.
+                        </div>
+                    </div>
+                    <div>
+                        <div class="TamSayfaCerceveAlaniIciUyeliBilgileriSayfasiKayitBasliklariMetni">Kullanıcı Adı</div>
+                        <div class="TamSayfaCerceveAlaniIciUyeliBilgileriSayfasiKayitIcerikleriMetni">@Session["kullanici_id"]</div>
+                        <div class="TamSayfaCerceveAlaniIciUyeliBilgileriSayfasiKayitBasliklariMetni">Şifre</div>
+                        <div class="TamSayfaCerceveAlaniIciUyeliBilgileriSayfasiKayitIcerikleriMetni">@Session["kullanici_sifre"]</div>
+
+                        <div class="TamSayfaCerceveAlaniIciUyeliBilgileriSayfasiKayitBasliklariMetni">Adı Soyadı</div>
+                        <div class="TamSayfaCerceveAlaniIciUyeliBilgileriSayfasiKayitIcerikleriMetni">@Session["kullanici_adi"] @Session["kullanici_soyadi"] </div>
+
+                        <div class="TamSayfaCerceveAlaniIciUyeliBilgileriSayfasiKayitBasliklariMetni">E-Mail Adresi</div>
+                        <div class="TamSayfaCerceveAlaniIciUyeliBilgileriSayfasiKayitIcerikleriMetni">info@technobilesem.com</div>
+
+
+                        <div class="TamSayfaCerceveAlaniIciUyeliBilgileriSayfasiKayitBasliklariMetni">Cep Telefonu</div>
+                        <div class="TamSayfaCerceveAlaniIciUyeliBilgileriSayfasiKayitIcerikleriMetni">0555 555 55 55</div>
+                        <div class="ButonlarIcinKapsamaAlani"><input class="button" type="submit" value="Bilgilerimi Güncellemek İstiyorum" class="FormElemanlariTuruncuButonlar" onclick="document.getElementById('TamSayfaCerceveAlaniIciYuzdeEllilikSagAlan').style.display='block'" tabindex="6"></div>
+                    </div>
+                </div>
+                <div id="TamSayfaCerceveAlaniIciYuzdeEllilikSagAlan" style="display:none;">
+                    <div class="TamSayfaCerceveAlaniIciAltiCizgiliBaslikAlani">
+                        <div>
+                            <div class="TamSayfaCerceveAlaniIciFormElemanlariBaslikMetni">Kullanıcı Adı</div>
+                            <div class="TamSayfaCerceveAlaniIciFormElemanlariIcinSatirAlani"><input name="kullanici_id" id="kullanici_id" type="text" class="FormElemanlariTextInputlari" value="@Session["kullanici_id"]" tabindex="1"></div>
+
+                            <div class="TamSayfaCerceveAlaniIciFormElemanlariBaslikMetni">Şifre</div>
+                            <div class="TamSayfaCerceveAlaniIciFormElemanlariIcinSatirAlani"><input name="kullanici_sifre" id="kullanici_sifre" type="password" class="FormElemanlariTextInputlari" value="@Session["kullanici_sifre"]" tabindex="2"></div>
+
+                            <div class="TamSayfaCerceveAlaniIciFormElemanlariBaslikMetni">Adı</div>
+                            <div class="TamSayfaCerceveAlaniIciFormElemanlariIcinSatirAlani"><input name="kullanici_adi" id="kullanici_soyadi" type="text" class="FormElemanlariTextInputlari" value="@Session["kullanici_adi"]" tabindex="3"></div>
+
+                            <div class="TamSayfaCerceveAlaniIciFormElemanlariBaslikMetni">Soyadı</div>
+                            <div class="TamSayfaCerceveAlaniIciFormElemanlariIcinSatirAlani"><input name="kullanici_soyadi" id="kullanici_soyadi" type="text" class="FormElemanlariTextInputlari" value="@Session["kullanici_soyadi"]" tabindex="4"></div>
+
+                            <div class="TamSayfaCerceveAlaniIciFormElemanlariBaslikMetni">E-Mail</div>
+                            <div class="TamSayfaCerceveAlaniIciFormElemanlariIcinSatirAlani"><input name="CepTelefonu" type="text" class="FormElemanlariTextInputlari" value="info@technobilesen.com" tabindex="5"></div>
+
+                            <div class="TamSayfaCerceveAlaniIciFormElemanlariBaslikMetni">Cep Telefonu</div>
+                            <div class="TamSayfaCerceveAlaniIciFormElemanlariIcinSatirAlani"><input name="CepTelefonu" type="text" class="FormElemanlariTextInputlari" value="0555 555 55 55" tabindex="5"></div>
+
+
+                            <div class="ButonlarIcinKapsamaAlani"><button type="button" class="FormElemanlariYesilButonlar" onclick="guncellebilgiler(@id)" tabindex="6">Bilgileri Güncelle</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</head>
+</html>
+

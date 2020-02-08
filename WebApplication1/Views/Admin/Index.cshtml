@@ -1,0 +1,106 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/adminlayout.cshtml";
+}
+@using WebApplication1.Service;
+@{
+    Service servis = new Service();
+    ViewBag.Title = "Anasayfa";
+}
+
+<html>
+<head>
+
+</head>
+<body>
+    <div style="padding:0 16px;">
+        <div id="TamSayfaYeniUrunlerAlani">
+            <div id="TamSayfaYeniUrunlerBaslikAlani">Yeni Ürünler</div>
+            @foreach (var item in servis.Urun_Sorgula())
+            {
+
+                <div class="columns">
+                    <ul class="price">
+                        <li><img src=@Url.Content(item.Key.urun_resim) style="width:100%;height:200px"></li>
+                        <li class="header" id="urun_id"><div>@item.Key.urun_markaadi </div><div> @item.Key.urun_modeladi </div> </li>
+                        @if (item.Key.urun_indirimfiyati == "null")
+                        {
+                            <li class="header">@item.Key.urun_fiyati</li>
+                        }
+                        else
+                        {
+                            <li class="header"><del>@item.Key.urun_fiyati</del> - @item.Key.urun_indirimfiyati</li>
+                        }
+                        <li class="header" @*id="rating_bar"*@>
+                            @for (int i = 0; i < (int)item.Value.ortalama; i++)
+                            {
+                                <span class="f1 fa fa-star checked"></span>
+
+
+                            }
+                            @if ((int)item.Value.ortalama != item.Value.ortalama)
+                            {
+                                <span class="f1 fa fa-star-half-o checked"></span>
+                            }
+                            @for (int i = 1; i <= 5 - item.Value.ortalama; i++)
+                            {
+                                <span class="f4 fa fa-star-o checked"></span>
+                            }
+
+                        </li>
+                    </ul>
+                </div>
+            }
+
+        </div>
+        <div id="TamSayfaYeniUrunlerAlani">
+            <div id="TamSayfaYeniUrunlerBaslikAlani">En Çok Satılanlar</div>
+            @foreach (var item in servis.SatilanUrunListele())
+            {
+                foreach (var item1 in servis.Urun_Sorgula())
+                {
+                    if (item1.Key.urun_id == item.urun_id)
+                    {
+                        <div class="columns">
+                            <ul class="price">
+                                <li><img src=@Url.Content(item1.Key.urun_resim) style="width:100%;height:200px"></li>
+                                <li class="header" id="urun_id"><div>@item1.Key.urun_markaadi </div><div> @item1.Key.urun_modeladi </div> </li>
+                                @if (item1.Key.urun_indirimfiyati == "null")
+                                {
+                                    <li class="header">@item1.Key.urun_fiyati</li>
+                                }
+                                else
+                                {
+                                    <li class="header"><del>@item1.Key.urun_fiyati</del> - @item1.Key.urun_indirimfiyati</li>
+                                }
+                                    <li class="header" @*id="rating_bar"*@>
+                                        @for (int i = 0; i < (int)item1.Value.ortalama; i++)
+                                        {
+                                            <span class="f1 fa fa-star checked"></span>
+
+
+                                        }
+                                        @if ((int)item1.Value.ortalama != item1.Value.ortalama)
+                                        {
+                                            <span class="f1 fa fa-star-half-o checked"></span>
+                                        }
+                                        @for (int i = 1; i <= 5 - item1.Value.ortalama; i++)
+                                        {
+                                            <span class="f4 fa fa-star-o checked"></span>
+                                        }
+
+                                    </li>
+                            </ul>
+                        </div>
+                    }
+                }
+            }
+
+        </div>
+        <div>
+        </div>
+    </div>
+</body>
+</html>
+

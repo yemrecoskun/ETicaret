@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <script src="~/Scripts/JavaScript.js"></script>
+    <script src="~/Scripts/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<body>
+    <button onclick="topFunction()" id="myBtn" type="button"><i class="fa fa-arrow-up"></i></button>
+    <div id="HeaderMenuUstuAlani">
+        <div id="HeaderMenuUstuSinirlamaAlani">
+            <header style="float:left;margin-left:43%;color:white;text-align:center;">
+                TeknoBileşen - Laptop Kategorisi
+            </header>
+            <ul id="HeaderMenuUstuSeceneklerAlani"></ul>
+        </div>
+    </div>
+    <center>
+        <div class="example"><img src="~/img/logo_transparent.png" style="  width: 100%;  max-width: 300px;  height: 20%;" /></div>
+    </center>
+    <ul class="topnav">
+        <li class="anamenu"><a href="~/Home/Index">Anasayfa</a></li>
+        <li><a href="~/Home/Laptop">Laptop</a></li>
+        <li><a href="~/Home/UrunKarsilastir">Karşılaştırma</a></li>
+        <li><a href="~/Home/Siparislerim">Siparişlerim</a></li>
+        <li class="ikincimenu"><a href="~/Home/Index" target="_top" onclick="hesapcikis()">Çıkış</a></li>
+        <li ><a href="~/Home/Hesabim" target="_top"><img src="~/img/KullaniciEkleBeyaz16x16.png" border="0" alt="" title=""> @Session["kullanici_adi"] @Session["kullanici_soyadi"]</a></li>
+        <li><a href="~/Home/AlisverisSepeti" target="_top"><label class="sepetmiktar" id="sepetmiktari">@Session["toplamadet"]</label><img src="~/img/SepetBeyaz16x16.png" border="0" alt="" title=""> Alışveriş Sepeti</a></li>
+
+    </ul>
+
+
+    <center>
+
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <div id="TamSayfaDortluBannerAlani">
+                    <div id="TamSayfaDortluBannerDengelemeAlani">
+
+                        <div class="TamSayfaDortluBannerSinirlamaAlani">
+                            <div class="TamSayfaDortluBannerResmi">
+                                <img src="~/img/HizliTeslimat.png" border="0" alt="" title="">
+                            </div>
+                            <div class="TamSayfaDortluBannerBaslikMetni">
+                                Bugün Teslimat
+                            </div>
+                            <div class="TamSayfaDortluBannerIcerikMetni">
+                                Saat 14:00'e kadar verdiğiniz siparişler aynı gün kapınızda.
+                            </div>
+                        </div>
+
+                        <div class="TamSayfaDortluBannerSinirlamaAlani">
+                            <div class="TamSayfaDortluBannerResmi">
+                                <img src="~/img/GuvenliAlisveris.png" border="0" alt="" title="">
+                            </div>
+                            <div class="TamSayfaDortluBannerBaslikMetni">
+                                Tek Tıkla Güvenli Alışveriş
+                            </div>
+                            <div class="TamSayfaDortluBannerIcerikMetni">
+                                Ödeme ve adres bilgilerinizi kaydedin, güvenli alışveriş yapın.
+                            </div>
+                        </div>
+
+                        <div class="TamSayfaDortluBannerSinirlamaAlani">
+                            <div class="TamSayfaDortluBannerResmi">
+                                <img src="~/img/MobilUyumu.png" border="0" alt="" title="">
+                            </div>
+                            <div class="TamSayfaDortluBannerBaslikMetni">
+                                Mobil Cebinizde
+                            </div>
+                            <div class="TamSayfaDortluBannerIcerikMetni">
+                                Dilediğiniz her yerden güvenli alışverişin keyfini çıkarın.
+                            </div>
+                        </div>
+
+                        <div class="TamSayfaDortluBannerSinirlamaAlani">
+                            <div class="TamSayfaDortluBannerResmi">
+                                <img src="~/img/IadeGarantisi.png" border="0" alt="" title="">
+                            </div>
+                            <div class="TamSayfaDortluBannerBaslikMetni">
+                                Kolay İade
+                            </div>
+                            <div class="TamSayfaDortluBannerIcerikMetni">
+                                Aldığınız ürünü iade etmek hiç bu kadar kolay olmamıştı.
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="FooterMenulerAlani">
+                    <div id="FooterMenulerSinirlamaAlani">
+                        <div class="FooterMenuleriSutunlarAlani">
+                            <div class="FooterMenuleriSutunlariBaslikAlani">Kurumsal</div>
+                            <div class="FooterMenuleriSutunlariMenulerAlani"><a href="#" target="_top">Hakkımızda</a></div>
+                            <div class="FooterMenuleriSutunlariMenulerAlani"><a href="#" target="_top">Banka Hesaplarımız</a></div>
+                            <div class="FooterMenuleriSutunlariMenulerAlani"><a href="#" target="_top">Havale Bildirim Formu</a></div>
+                            <div class="FooterMenuleriSutunlariMenulerAlani"><a href="#" target="_top">Bayilerimiz</a></div>
+                            <div class="FooterMenuleriSutunlariMenulerAlani"><a href="#" target="_top">Bayilik Başvuru Formu</a></div>
+                            <div class="FooterMenuleriSutunlariMenulerAlani"><a href="#" target="_top">Kargom Nerede?</a></div>
+                            <div class="FooterMenuleriSutunlariMenulerAlani"><a href="#" target="_top">İletişim</a></div>
+                        </div>
+                        <div class="FooterMenuleriSutunlarAlani">
+                            <div class="FooterMenuleriSutunlariBaslikAlani">Üyelik & Hizmetler</div>
+                            <div class="FooterMenuleriSutunlariMenulerAlani"><a href="#" target="_top">Hesabım</a></div>
+                            <div class="FooterMenuleriSutunlariMenulerAlani"><a href="#" target="_top">Çıkış</a></div>
+                            <div class="FooterMenuleriSutunlariMenulerAlani"><a href="#" target="_top">Sık Sorulan Sorular</a></div>
+                        </div>
+                        <div class="FooterMenuleriSutunlarAlani FooterMenuleriSutunlarTemizleAlani">
+                            <div class="FooterMenuleriSutunlariBaslikAlani">Sözleşmeler</div>
+                            <div class="FooterMenuleriSutunlariMenulerAlani"><a href="#" target="_top">Üyelik Sözleşmesi</a></div>
+                            <div class="FooterMenuleriSutunlariMenulerAlani"><a href="#" target="_top">Bayilik Sözleşmesi</a></div>
+                            <div class="FooterMenuleriSutunlariMenulerAlani"><a href="#" target="_top">Kullanım Koşulları</a></div>
+                            <div class="FooterMenuleriSutunlariMenulerAlani"><a href="#" target="_top">Gizlik ve Güvenlik</a></div>
+                            <div class="FooterMenuleriSutunlariMenulerAlani"><a href="#" target="_top">Mesafeli Satış Sözleşmesi</a></div>
+                            <div class="FooterMenuleriSutunlariMenulerAlani"><a href="#" target="_top">Teslimat</a></div>
+                            <div class="FooterMenuleriSutunlariMenulerAlani"><a href="#" target="_top">İptal & İade & Değişim</a></div>
+                        </div>
+                        <div class="FooterMenuleriSutunlarAlani">
+                            <div class="FooterMenuleriSutunlariBaslikAlani">Bizi Takip Edin</div>
+                            <div class="FooterMenuleriSutunlariMenulerAlani"><a href="#" target="_top"><img src="~/img/Facebook16x16.png" border="0" alt="" title="">Facebook</a></div>
+                            <div class="FooterMenuleriSutunlariMenulerAlani"><a href="#" target="_top"><img src="~/img/Twitter16x16.png" border="0" alt="" title="">Twitter</a></div>
+                            <div class="FooterMenuleriSutunlariMenulerAlani"><a href="#" target="_top"><img src="~/img/LinkedIn16x16.png" border="0" alt="" title="">LinkedIn</a></div>
+                            <div class="FooterMenuleriSutunlariMenulerAlani"><a href="#" target="_top"><img src="~/img/GooglePlus16x16.png" border="0" alt="" title="">Google+</a></div>
+                            <div class="FooterMenuleriSutunlariMenulerAlani"><a href="#" target="_top"><img src="~/img/Instagram16x16.png" border="0" alt="" title="">Instagram</a></div>
+                            <div class="FooterMenuleriSutunlariMenulerAlani"><a href="#" target="_top"><img src="~/img/Pinterest16x16.png" border="0" alt="" title="">Pinterest</a></div>
+                            <div class="FooterMenuleriSutunlariMenulerAlani"><a href="#" target="_top"><img src="~/img/YouTube16x16.png" border="0" alt="" title="">YouTube</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="FooterAltMetniAlani">
+                    <div id="FooterAltMetniSinirlamaAlani">
+                        <p>&copy; @DateTime.Now.Year - Tekno Bileşen Tüm Hakları Saklıdır</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </center>
+    <script type="text/javascript">
+        //gototop
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>

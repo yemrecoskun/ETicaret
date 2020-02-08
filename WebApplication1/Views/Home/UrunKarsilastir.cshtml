@@ -1,0 +1,170 @@
+﻿@using WebApplication1.Service;
+@{
+    Service servis = new Service();
+    ViewBag.Title = "UrunKarsilastir";
+    if (Session["kullanici_id"] == null)
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/kullanicilayout.cshtml";
+    }
+    int ozellikler = 0;
+}
+<html>
+<head>
+
+</head>
+<body>
+
+    <div class="TamSayfaYeniUrunlerBaslikAlani"> Karşılaştırma</div>
+    <div style="padding:0 16px;">
+        <div class="columns" style="width:366px">
+            <ul class="price">
+                <li style="float:right">&times;</li>
+                <li><img style="width:100%;height:200px"></li>
+                <li class="header" id="urun_id"><div>Marka</div><div>Model</div></li>
+                <li class="header">Ürün Fiyatı<i class="fa fa-try"></i></li>
+                <li class="header">Ürün Puanı</li>
+                <li class="header"> Özellikler</li>
+                @foreach (var item in servis.OzellikListesi())
+                {
+                    ozellikler = ozellikler + 1;
+                    <li class="header">@item.urun_ozellikadi</li>
+                }
+                <li class="grey"></li>
+                <li class="grey"></li>
+            </ul>
+        </div>
+
+        @for (int n = 1; n <= 4; n++)
+        {
+            if ((Session["karsilastir" + n]) != "null")
+            {
+                foreach (var item in servis.UrunAra(Convert.ToInt32(Session["karsilastir" + n])))
+                {
+                    <div class="columns" style="width:366px">
+                        <ul class="price">
+                            <li style="float:right"><a href="#" onclick="karsilastirsil(@n)">&times;</a></li>
+                            <li><img src=@Url.Content(item.Key.urun_resim) style="width:100%;height:200px"></li>
+                            <li class="header" id="urun_id"><div>@item.Key.urun_markaadi </div><div> @item.Key.urun_modeladi </div> </li>
+                            @if (item.Key.urun_indirimfiyati == "null")
+                            {
+                                <li class="header">@item.Key.urun_fiyati <i class="fa fa-try"></i></li>
+                            }
+                            else
+                            {
+                                <li class="header"><del>@item.Key.urun_fiyati <i class="fa fa-try"></i></del> - @item.Key.urun_indirimfiyati <i class="fa fa-try"></i></li>
+                            }
+                            <li class="header">
+                                @for (int i = 0; i < (int)item.Value.ortalama; i++)
+                                {
+                                    <span class="f1 fa fa-star checked"></span>
+
+
+                                }
+                                @if ((int)item.Value.ortalama != item.Value.ortalama)
+                                {
+                                    <span class="f1 fa fa-star-half-o checked"></span>
+                                }
+                                @for (int i = 1; i <= 5 - item.Value.ortalama; i++)
+                                {
+                                    <span class="f4 fa fa-star-o checked"></span>
+                                }
+                            </li>
+                            <li class="header">Özellikler</li>
+                            @foreach (var ozelliklist in servis.OzellikListesi())
+                            {
+                                var ozellik = servis.UrunOzellikAra(item.Key.urun_id);
+                                for (int i = 0; i < ozellikler; i++)
+                                {
+                                    if (i < ozellik.Count())
+                                    {
+                                        if (ozellik[i].urun_ozellikadi == ozelliklist.urun_ozellikadi)
+                                        {
+                                            <li class="header">@ozellik[i].urun_ozellik</li>
+                                        }
+                                        else if (i == ozellik.Count())
+                                        {
+                                            <li class="header">-</li>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <li class="header">-</li>
+                                        break;
+                                    }
+
+                                }
+                            }
+                            <li class="grey"><button class="button" onclick="urunincele(@item.Key.urun_id)" style="color:white">Ürünü İncele</button></li>
+                            <li class="grey"><button class="button" onclick="sepeteekle(@item.Key.urun_id)" style="color:white">Sepete Ekle</button></li>
+                        </ul>
+                    </div>
+                }
+            }
+        }
+        @for (int n = 1; n <= 4; n++)
+        {
+            if ((Session["karsilastir" + n]) == "null")
+            {
+                <div class="columns" style="width:366px">
+                    <ul class="price">
+                        <li style="float:right">&times;</li>
+                        <li class="addkarsilastir"><a href="~/Home/Laptop"><i style="width:100%;height:260px;margin-top:260px" class="fa fa-plus" aria-hidden="true">Ekle</i></a></li>
+                    </ul>
+                </div>
+            }
+
+        }
+        <div id="sepetmodal" class="w3-modal">
+            <div class="w3-modal-content w3-card-4">
+                <header class="w3-container w3-teal">
+                    <h3>TechnoBileşen</h3>
+                </header>
+                <img src="~/img/true.jfif" style="width:50px;height:50px" />
+                <br />
+                <h3 class="w3-container" id="sepetalani"></h3>
+                <header class="w3-container w3-teal" style="width:100%;">
+                    <br />
+                    <a href="#" onclick="document.getElementById('sepetmodal').style.display='none'"
+                       class="w3-button w3-display-topright" style="color:white;text-decoration:none;padding:10px;font-size:20px">
+                        Çık
+                    </a>
+                    <a href="~/Home/AlisverisSepeti" onclick="document.getElementById('sepetmodal').style.display='none'"
+                       class="w3-button w3-display-topright" style="color:white;text-decoration:none;padding:10px;font-size:20px">
+                        Sepete Git
+                    </a>
+                    <br />
+                    <br />
+                </header>
+            </div>
+        </div>
+        <div id="karsilastir" class="w3-modal">
+            <div class="w3-modal-content w3-card-4">
+                <header class="w3-container w3-teal">
+                    <h3>TechnoBileşen</h3>
+                </header>
+                <img src="~/img/true.jfif" style="width:50px;height:50px" />
+                <br />
+                <h3 class="w3-container" id="karsilastirmaalani"></h3>
+                <header class="w3-container w3-teal" style="width:100%;">
+                    <br />
+                    <a href="#" onclick="document.getElementById('karsilastir').style.display='none'"
+                       class="w3-button w3-display-topright" style="color:white;text-decoration:none;padding:10px;font-size:20px">
+                        Çık
+                    </a>
+                    <a href="~/Home/UrunKarsilastir" onclick="document.getElementById('karsilastir').style.display='none'"
+                       class="w3-button w3-display-topright" style="color:white;text-decoration:none;padding:10px;font-size:20px">
+                        Karşılaştırmaya Git
+                    </a>
+                    <br />
+                    <br />
+                </header>
+            </div>
+        </div>
+    </div>
+    <div class="TamSayfaYeniUrunlerBaslikAlani"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+</body>
+</html>

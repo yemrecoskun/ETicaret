@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "GirisYap";
+    if (Session["kullanici_id"] == null)
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/kullanicilayout.cshtml";
+    }
+}
+<html>
+<head>
+
+</head>
+<body>
+    <div style="padding:0 16px;">
+        <div style="background-color:#333;max-width:550px;color:white">
+            <form id="loginform" name="loginform" style="max-width:500px;margin:auto">
+
+                <br />
+                <div id="msg" style="display:none"><span style="color:red;">Kullanıcı Adı veya Şifreniz Hatalıdır.Lütfen Tekrar Deneyiniz.</span></div>
+                <h2>Giriş Yap</h2>
+                <div class="input-container">
+                    <i class="fa fa-user icon"></i>
+                    <input class="input-field" type="text" placeholder="Kullanıcı Adı" name="kullanici_id" id="kullanici_id" required>
+                </div>
+
+                <div class="input-container">
+                    <i class="fa fa-key icon"></i>
+                    <input class="input-field" type="password" placeholder="Şifre" name="kullanici_sifre" id="kullanici_sifre" required>
+                </div>
+                <button type="button" class="btn" onclick="giris()">GİRİŞ</button>
+                <br /><br />
+                <a href="#" style="color:white">Şifremi Unuttum?</a>&nbsp;&nbsp;&nbsp;<a href="~/Home/UyeOl" style="color:white" target="_top"><img src="~/img/KullaniciEkleBeyaz16x16.png" border="0" alt="" title=""> Üye Ol</a>
+                <br /><br />
+            </form>
+        </div>
+
+        <br />
+    </div>
+</body>
+</html>

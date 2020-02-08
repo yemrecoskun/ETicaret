@@ -1,0 +1,151 @@
+﻿@using WebApplication1.Service;
+@{
+    ViewBag.Title = "AlisverisSepeti";
+    if (Session["kullanici_id"] == null)
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/kullanicilayout.cshtml";
+    }
+    Service servis = new Service();
+    int toplamfiyat = 0;
+    int indirimfiyat = 0;
+    int adet = (Convert.ToInt32(Session["adet"]));
+    int toplamadet = (Convert.ToInt32(Session["toplamadet"]));
+    int silinenurun = 0;
+}
+<html>
+<head>
+
+</head>
+<body>
+    <div style="padding:0 16px;">
+        @if (toplamadet == null || toplamadet == 0)
+        {
+            <div id="TamSayfaCerceveAlani">
+                <div id="TamSayfaCerceveSinirlamaAlani">
+                    <div id="TamSayfaCerceveAlaniIciYuzdeYuzlukAlan">
+                        <div class="TamSayfaCerceveAlaniIciAltiCizgiliBaslikAlani">
+                            <div class="TamSayfaCerceveAlaniIciAltiCizgiliBaslikAlaniUstBaslikMetni" style="color:#08C">
+                                Alışveriş Sepeti
+                            </div>
+                            <div class="TamSayfaCerceveAlaniIciAltiCizgiliBaslikAlaniAltBaslikMetni">
+                                Alışveriş sepetine eklemiş olduğun herhangi bir ürün bulunmamaktadır.
+                            </div>
+                        </div>
+
+                        <div id="TamSayfaCerceveAlaniIciBosVerilerIcinBilgiAlani">
+                            <div id="TamSayfaCerceveAlaniIciBosVerilerIcinIslemIconuAlani">
+                                <img src="~/img/Bilinmiyor.png" border="0" alt="" title="">
+                            </div>
+                            <div id="TamSayfaCerceveAlaniIciBosVerilerIcinBaslikAlani">
+                                Alışveriş Sepetinde Ürün Bulunmuyor!
+                            </div>
+                            <div id="TamSayfaCerceveAlaniIciBosVerilerIcinIcerikAlani">
+                                Alışveriş sepetinizde herhangi bir ürün bulunmamaktadır. Sitemizdeki ürünleri inceleyerek, ihtiyacınız olan ürün veya ürünleri alışveriş sepetinize ekleyerek hemen alışverişe başlayabilirsiniz. Ana sayfaya dönmek için lütfen <a href="~/Home/index" target="_top">buraya tıklayınız</a>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div id="TamSayfaCerceveAlani">
+                <div id="TamSayfaCerceveSinirlamaAlani">
+
+                    <div id="TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiSolAlan">
+                        <div class="TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliBaslikAlani">
+                            <div class="TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliBaslikAlaniUstBaslikMetni" style="color:#08C">
+                                Alışveriş Sepeti
+                            </div>
+                            <div class="TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliBaslikAlaniAltBaslikMetni">
+                                Alışveriş sepetine eklemiş olduğun ürünler aşağıdadır.
+                            </div>
+                        </div>
+                        @{
+                            for (int i = 1; i <= adet; i++)
+                            {
+                                WebApplication1.Models.Urun urun = new WebApplication1.Models.Urun();
+                                if (Session["eklenenurun" + i] != null)
+                                {
+                                    urun = servis.UrunAra2(Convert.ToInt32(Session["eklenenurun" + i]));
+                                    silinenurun = i;
+                                    <div class="TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunlerAlani">
+                                        <div class="TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunResmiAlani">
+                                            <img src="@Url.Content(urun.urun_resim)" border="0" alt="" title="">
+                                        </div>
+                                        <div class="TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunSilResmiAlani">
+                                            <img src="~/img/SilDaireli20x20.png" border="0" alt="" title="" onclick="silsepeturun(@silinenurun)">
+                                        </div>
+                                        <div class="TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunAdiAlani">
+                                            @urun.urun_adi - @urun.urun_markaadi @urun.urun_modeladi
+                                        </div>
+                                        <div class="TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunAdediAlani">
+                                            <div class="TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunAdediVeIslemleriAlani">
+                                                <div class="TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunAdediEksiltmeAlani">
+                                                    <img src="~/img/AzaltDaireli20x20.png" border="0" alt="" title="">
+                                                </div>
+                                                <div class="TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunAdediRakamAlani">
+                                                    0
+                                                </div>
+                                                <div class="TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunAdediArttirmaAlani">
+                                                    <img src="~/img/ArttirDaireli20x20.png" border="0" alt="" title="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiFiyatAlani">
+                                            @{ toplamfiyat = Convert.ToInt32(urun.urun_fiyati) + toplamfiyat; Session["toplamfiyat"] = toplamfiyat;}
+                                            @if (urun.urun_indirimfiyati == "null") { }
+                                            else
+                                            {
+                                                indirimfiyat = Convert.ToInt32(urun.urun_fiyati) - Convert.ToInt32(urun.urun_indirimfiyati) + indirimfiyat;
+                                                Session["indirimfiyat"] = indirimfiyat;
+                                            }
+                                            @urun.urun_fiyati TL
+                                        </div>
+                                    </div>
+                                }
+                            }
+                        }
+
+                    </div>
+                    <div id="TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiSagAlan">
+                        <div class="TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliSagBaslikAlani">
+                            <div class="TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliSagBaslikAlaniUstBaslikMetni" style="color:#08C">
+                                Sipariş Özeti
+                            </div>
+                            <div class="TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliSagBaslikAlaniAltBaslikMetni">
+                                Toplam @toplamadet Adet Ürün.
+                            </div>
+                        </div>
+
+
+
+                        <div class="TamSayfaCerceveAlaniIciAlisverisSepetiUrunlerToplamiKDVDahilBaslikAlani">Ürünler Toplamı </div>
+                        <div class="TamSayfaCerceveAlaniIciAlisverisSepetiUrunlerToplamiKDVDahilRakamAlani">@toplamfiyat TL</div>
+
+                        <div class="TamSayfaCerceveAlaniIciAlisverisSepetiIndirimlerToplamiKDVDahilBaslikAlani">İndirimler Toplamı </div>
+                        <div class="TamSayfaCerceveAlaniIciAlisverisSepetiIndirimlerToplamiKDVDahilRakamAlani">@indirimfiyat TL</div>
+
+                        <div class="TamSayfaCerceveAlaniIciAlisverisSepetiUrunlerToplamiKDVDahilBaslikAlani">KDV Toplamı</div>
+                        <div class="TamSayfaCerceveAlaniIciAlisverisSepetiUrunlerToplamiKDVDahilRakamAlani">@Convert.ToInt32((toplamfiyat - indirimfiyat) * 1 / 100) TL</div>
+                        @{Session["odenecektutar"] = (toplamfiyat - indirimfiyat + (toplamfiyat - indirimfiyat) * 1 / 100).ToString();
+                            Session["KDV"] = Convert.ToInt32((toplamfiyat - indirimfiyat) * 1 / 100);}
+                        <div class="TamSayfaCerceveAlaniIciAlisverisSepetiOdenecekTutarBaslikAlani">Ödenecek Tutar (KDV Dahil)</div>
+                        <div class="TamSayfaCerceveAlaniIciAlisverisSepetiOdenecekTutarRakamAlani">@Session["odenecektutar"] TL</div>
+
+                        <div class="TamSayfaCerceveAlaniIciAlisverisSepetiSiparisOzetiIciButonAlani" style="background-color:#08C">
+                            <a href="~/Home/AlisverisSepetiAdres" target="_top"><span class="TamSayfaCerceveAlaniIciAlisverisSepetiSiparisOzetiIciButonuIconu"><img src="~/img/SepetBeyaz21x20.png" border="0" alt="" title=""></span><span class="TamSayfaCerceveAlaniIciAlisverisSepetiSiparisOzetiIciButonuMetni">Alışverişi Tamamla</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+</body>
+</html>
+

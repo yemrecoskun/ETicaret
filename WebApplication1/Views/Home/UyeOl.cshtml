@@ -1,0 +1,137 @@
+﻿
+@{
+    ViewBag.Title = "UyeOl";
+    if (Session["kullanici_id"] == null)
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/kullanicilayout.cshtml";
+    }
+}
+
+<html>
+<head>
+
+</head>
+<body>
+    <div style="padding:0 16px;">
+        <div id="TamSayfaCerceveAlani">
+            <div id="TamSayfaCerceveSinirlamaAlani">
+                <div id="TamSayfaCerceveAlaniIciYuzdeEllilikSolAlan">
+                    <div class="TamSayfaCerceveAlaniIciAltiCizgiliBaslikAlani">
+                        <div class="TamSayfaCerceveAlaniIciAltiCizgiliBaslikAlaniUstBaslikMetni">
+                            Hesap Oluştur
+                        </div>
+                        <div class="TamSayfaCerceveAlaniIciAltiCizgiliBaslikAlaniAltBaslikMetni">
+                            Yeni misin? Aşağıdan hesap oluşturabilirsin.
+                        </div>
+                    </div>
+                    <div id="kullaniciuyeformu" method="post">
+                        <div class="TamSayfaCerceveAlaniIciFormElemanlariBaslikMetni">İsim </div>
+                        <div class="TamSayfaCerceveAlaniIciFormElemanlariIcinSatirAlani"><input id="kullanici_adi" name="kullanici_adi" type="text" class="FormElemanlariTextInputlari" tabindex="1" required="required"></div>
+
+                        <div class="TamSayfaCerceveAlaniIciFormElemanlariBaslikMetni">Soyisim </div>
+                        <div class="TamSayfaCerceveAlaniIciFormElemanlariIcinSatirAlani"><input id="kullanici_soyadi" name="kullanici_soyadi" type="text" class="FormElemanlariTextInputlari" tabindex="1" required="required"></div>
+
+                        <div class="TamSayfaCerceveAlaniIciFormElemanlariBaslikMetni">Kullanıcı Adı</div>
+                        <div class="TamSayfaCerceveAlaniIciFormElemanlariBaslikMetni" style="color:red;display:none" id="kullaniciadimessage">Kullanıcı Adı Bulunmaktadır. Tekrar Deneyiniz!</div>
+                        <div class="TamSayfaCerceveAlaniIciFormElemanlariIcinSatirAlani"><input id="kullanici_id" name="kullanici_id" type="text" class="FormElemanlariTextInputlari" tabindex="2" required="required"></div>
+
+                        <div class="TamSayfaCerceveAlaniIciFormElemanlariBaslikMetni">Şifre</div>
+                        <div class="TamSayfaCerceveAlaniIciFormElemanlariIcinSatirAlani"><input id="kullanici_sifre" name="kullanici_sifre" type="password" class="FormElemanlariTextInputlari" tabindex="3" required="required"></div>
+
+                        <div class="TamSayfaCerceveAlaniIciFormElemanlariBaslikMetni" style="color:red;display:none" id="sifremessage">Hata! Şifreler Aynı Değil. Lütfen Şifreyi Doğrulayın</div>
+                        <div class="TamSayfaCerceveAlaniIciFormElemanlariBaslikMetni">Şifre (Tekrar)</div>
+                        <div class="TamSayfaCerceveAlaniIciFormElemanlariIcinSatirAlani"><input name="kullanici_sifretekrar" id="kullanici_sifretekrar" type="password" class="FormElemanlariTextInputlari" tabindex="4" required="required"></div>
+
+                        <div class="TamSayfaCerceveAlaniIciFormElemanlariBaslikMetni">Cep Telefonu</div>
+                        <div class="TamSayfaCerceveAlaniIciFormElemanlariIcinSatirAlani"><input id="kullanici_ceptel" name="kullanici_ceptel" type="number" size="11" class="FormElemanlariTextInputlari" tabindex="5" required="required"></div>
+
+                        <div class="CheckBoxlarveSecenekleriIcinKapsamaAlani">
+                            <span class="CheckBoxveSeceneklerKapsamaAlani">
+                                <label class="CheckBoxKapsamaAlani">
+                                    <input name="EmailIleHeberdarOl" type="checkbox" class="FormElemanlariCheckBoxInputlari">
+                                    <span class="CheckBoxIcinBicimlendirmeAlani"></span>
+                                    <span class="CheckBoxYaniMetinAlani">E-Mail ile haberdar olmak istiyorum.</span>
+                                </label>
+                            </span>
+                        </div>
+
+                        <div class="CheckBoxlarveSecenekleriIcinKapsamaAlani">
+                            <span class="CheckBoxveSeceneklerKapsamaAlani">
+                                <label class="CheckBoxKapsamaAlani">
+                                    <input name="SmsIleHeberdarOl" type="checkbox" class="FormElemanlariCheckBoxInputlari">
+                                    <span class="CheckBoxIcinBicimlendirmeAlani"></span>
+                                    <span class="CheckBoxYaniMetinAlani">Sms ile haberdar olmak istiyorum.</span>
+                                </label>
+                            </span>
+                        </div>
+
+                        <div class="CheckBoxlarveSecenekleriIcinKapsamaAlani">
+                            <span class="CheckBoxveSeceneklerKapsamaAlani">
+                                <label class="CheckBoxKapsamaAlani">
+                                    <input name="UyelikSozlesmesiOnay" type="checkbox" class="FormElemanlariCheckBoxInputlari">
+                                    <span class="CheckBoxIcinBicimlendirmeAlani"></span>
+                                    <span class="CheckBoxYaniMetinAlani"><a href="#" target="_blank"><b>Üyelik sözleşmesi</b></a>'ni okudum ve onaylıyorum.</span>
+                                </label>
+                            </span>
+                        </div>
+
+                        <div class="ButonlarIcinKapsamaAlani"><input type="submit" onclick="uyeol()" value="Hesabımı Oluştur" class="FormElemanlariYesilButonlar" tabindex="6"></div>
+                    </div>
+                </div>
+
+                <div id="TamSayfaCerceveAlaniIciYuzdeEllilikSagAlan">
+                    <div class="TamSayfaCerceveAlaniIciAltiCizgiliBaslikAlani">
+                        <div class="TamSayfaCerceveAlaniIciAltiCizgiliBaslikAlaniUstBaslikMetni">
+                            Neden mi Tekno Bileşen?
+                        </div>
+                        <div class="TamSayfaCerceveAlaniIciAltiCizgiliBaslikAlaniAltBaslikMetni">
+                            Sorusunun cevabı: Çünkü birçok nedeni var.
+                        </div>
+                    </div>
+
+                    <div class="TamSayfaCerceveAlaniIciBilgiParagraflariKapsamaAlani">
+                        <div class="TamSayfaCerceveAlaniIciBilgiParagraflariResimliBaslikMetniAlani">
+                            <img src="~/img/AdamSiyah20x20.png" border="0" alt="" title=""><span class="TamSayfaCerceveAlaniIciBilgiParagraflariResimliBaslikMetni">Profosyonel</span>
+                        </div>
+                        <div class="TamSayfaCerceveAlaniIciBilgiParagraflariAciklamaMetni">Kadromuz, Türkiye'deki en ileri düzey profesyonel eğitmenlerden, geliştiricilerden ve tasarımcılardan oluşmaktadır. Bu sayede en kolay seviyeden, en ileri seviyeye kadar tüm eğitimleri öğrencilerine sunar.</div>
+                    </div>
+
+                    <div class="TamSayfaCerceveAlaniIciBilgiParagraflariKapsamaAlani">
+                        <div class="TamSayfaCerceveAlaniIciBilgiParagraflariResimliBaslikMetniAlani">
+                            <img src="~/img/RozetYesilSiyah20x20.png" border="0" alt="" title=""><span class="TamSayfaCerceveAlaniIciBilgiParagraflariResimliBaslikMetni">Kaliteli ve Güncel</span>
+                        </div>
+                        <div class="TamSayfaCerceveAlaniIciBilgiParagraflariAciklamaMetni">Türkiye'deki ve Dünya'daki tüm yenilikler ile birlikte tüm teknolojileri de sürekli takip eder, inceler, ararştırır ve öğreniriz. Bu sayede, öğrencilerimize daima en kaliteli, en güncel, en üstün eğitimleri ve eğitim ürünlerini sunarız.</div>
+                    </div>
+
+                    <div class="TamSayfaCerceveAlaniIciBilgiParagraflariKapsamaAlani">
+                        <div class="TamSayfaCerceveAlaniIciBilgiParagraflariResimliBaslikMetniAlani">
+                            <img src="~/img/CarklarSiyah20x20.png" border="0" alt="" title=""><span class="TamSayfaCerceveAlaniIciBilgiParagraflariResimliBaslikMetni">Yenilikçi</span>
+                        </div>
+                        <div class="TamSayfaCerceveAlaniIciBilgiParagraflariAciklamaMetni">Tüm eğitim setlerimiz, kitaplarımız ve sonuç odaklı eğitimlerimiz daima en güncel içeriğe sahip olup, zaman içerisinde yeni bir versiyon çıkması durumunda satıştan kaldırılarak, en son versiyon için sıfırdan hazırlanarak yeniden satışa sunulur.</div>
+                    </div>
+
+                    <div class="TamSayfaCerceveAlaniIciBilgiParagraflariKapsamaAlani">
+                        <div class="TamSayfaCerceveAlaniIciBilgiParagraflariResimliBaslikMetniAlani">
+                            <img src="~/img/GulenYuzMavi20x20.png" border="0" alt="" title=""><span class="TamSayfaCerceveAlaniIciBilgiParagraflariResimliBaslikMetni">Eğlenceli</span>
+                        </div>
+                        <div class="TamSayfaCerceveAlaniIciBilgiParagraflariAciklamaMetni">Tüm eğitmenlerimiz, standart ve sıkıcı eğitimlerin aksine, keyifli ve eğlenceli bir şekilde kolaylıkla öğrnemeyi sağlar. Bu sayede tüm öğrencilerimiz için hedeflenen eğitim seviyesine erişmek çok kolay olmaktadır.</div>
+                    </div>
+
+                    <div class="TamSayfaCerceveAlaniIciBilgiParagraflariKapsamaAlani">
+                        <div class="TamSayfaCerceveAlaniIciBilgiParagraflariResimliBaslikMetniAlani">
+                            <img src="~/img/MektupMobilKoyuGri20x20.png" border="0" alt="" title=""><span class="TamSayfaCerceveAlaniIciBilgiParagraflariResimliBaslikMetni">Ulaşılabilir</span>
+                        </div>
+                        <div class="TamSayfaCerceveAlaniIciBilgiParagraflariAciklamaMetni">Eğitmenlerimiz, geliştiricilerimiz ve tasarımcılarımız yardımcı olmayı seven, aynı zamanda da cevap vermekten kaçınmayan kişilerdir. Dilediğiniz zaman rahatlıkla iletişime geçilebilir. Sorunlarınıza çok kısa bir süre içerisinde yanıt alabilirsiniz.</div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    
+    </div>
+</body>
+</html>
+

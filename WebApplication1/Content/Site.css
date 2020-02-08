@@ -1,0 +1,6397 @@
+﻿body {
+    margin: 0;
+}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+    ul.topnav li {
+        float: left;
+    }
+
+        ul.topnav li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+            ul.topnav li a:hover:not(.active) {
+                background-color: #111;
+            }
+
+            ul.topnav li a.active {
+                background-color: #4CAF50;
+            }
+
+        ul.topnav li.right {
+            float: right;
+        }
+
+        ul.topnav li.anamenu {
+            margin-left: 19%;
+        }
+
+        ul.topnav li.ikincimenu {
+            margin-left: 33%;
+        }
+
+@media screen and (max-width: 600px) {
+    ul.topnav li.right,
+    ul.topnav li {
+        float: none;
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+
+        ul.topnav li.anamenu, ul.topnav li.ikincimenu {
+            margin-left: initial;
+        }
+}
+
+#HeaderMenuAlani {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    border: none;
+    border-bottom: 1px solid #CCC;
+    outline: none;
+    vertical-align: top;
+    text-align: center;
+}
+
+#HeaderMenuUstuAlani {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: 30px;
+    min-height: 30px;
+    max-height: 30px;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    border-top: 2px solid #07B;
+    outline: none;
+    background-color: #08C;
+    vertical-align: top;
+    text-align: center;
+}
+
+#HeaderMenuUstuSeceneklerAlani {
+    display: inline-block;
+    list-style: none;
+    float: right;
+    height: 30px;
+    min-height: 30px;
+    max-height: 30px;
+    margin: 0 auto;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-align: left;
+}
+
+.HeaderMenuUstuSecenekleri {
+    display: inline-block;
+    float: left;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 5px;
+    padding-right: 5px;
+    border: none;
+    outline: none;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #FFF;
+    font-size: 12px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1.5;
+    text-align: left;
+    text-decoration: none;
+}
+
+    .HeaderMenuUstuSecenekleri a {
+        font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+        color: #FFF;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: normal;
+        text-decoration: none;
+    }
+
+        .HeaderMenuUstuSecenekleri a:link, .HeaderMenuUstuSecenekleri a:active, .HeaderMenuUstuSecenekleri a:visited {
+            font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+            color: #FFF;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: normal;
+            text-decoration: none;
+        }
+
+        .HeaderMenuUstuSecenekleri a:hover {
+            font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+            color: #FF0;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: normal;
+            text-decoration: none;
+        }
+
+    .HeaderMenuUstuSecenekleri img {
+        display: block;
+        width: 16px;
+        min-width: 16px;
+        max-width: 16px;
+        height: 16px;
+        min-height: 16px;
+        max-height: 16px;
+        margin: 0 auto;
+        padding: 0;
+        padding-top: 1px;
+        border: none;
+        outline: none;
+    }
+
+* {
+    box-sizing: border-box;
+}
+
+.columns {
+    float: left;
+    width: 30%;
+    padding: 20px;
+    perspective: 10000px;
+}
+
+.price {
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+
+.price1 {
+    color: black;
+}
+
+.price2 {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+}
+.columns:hover .price{
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+    /*transform: rotateY(360deg);*/
+    
+}
+.price1, .price2{
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.price .header {
+    background-color: #333;
+    color: white;
+    font-size: 25px;
+}
+
+.price li {
+    border-bottom: 1px solid #eee;
+    padding: 8px;
+    text-align: center;
+}
+
+.price .grey {
+    background-color: #eee;
+    font-size: 20px;
+    width:100%;
+}
+
+.button {
+    background-color: #08C;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    width:100%;
+}
+a.button:hover{
+    color:white;
+    background-color:#333;
+}
+
+@media only screen and (max-width: 600px) {
+    .columns {
+        width: 100%;
+    }
+}
+
+footer {
+    width: -webkit-calc(100% - 10px);
+    width: -moz-calc(100% - 10px);
+    width: -o-calc(100% - 10px);
+    width: -ms-calc(100% - 10px);
+    width: calc(100% - 10px);
+    min-width: -webkit-calc(100% - 10px);
+    min-width: -moz-calc(100% - 10px);
+    min-width: -o-calc(100% - 10px);
+    min-width: -ms-calc(100% - 10px);
+    min-width: calc(100% - 10px);
+    max-width: -webkit-calc(100% - 10px);
+    max-width: -moz-calc(100% - 10px);
+    max-width: -o-calc(100% - 10px);
+    max-width: -ms-calc(100% - 10px);
+    max-width: calc(100% - 10px);
+    height: auto;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+#TamSayfaYeniUrunlerBaslikAlani {
+    display: block;
+    width: -webkit-calc(100% - 10px);
+    width: -moz-calc(100% - 10px);
+    width: -o-calc(100% - 10px);
+    width: -ms-calc(100% - 10px);
+    width: calc(100% - 10px);
+    min-width: -webkit-calc(100% - 10px);
+    min-width: -moz-calc(100% - 10px);
+    min-width: -o-calc(100% - 10px);
+    min-width: -ms-calc(100% - 10px);
+    min-width: calc(100% - 10px);
+    max-width: -webkit-calc(100% - 10px);
+    max-width: -moz-calc(100% - 10px);
+    max-width: -o-calc(100% - 10px);
+    max-width: -ms-calc(100% - 10px);
+    max-width: calc(100% - 10px);
+    height: auto;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 0;
+    padding: 10px 5px;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #08C;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: white;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 600;
+    line-height: 120%;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    #TamSayfaYeniUrunlerBaslikAlani {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    #TamSayfaYeniUrunlerBaslikAlani {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width:991px) { /* M, S, XS */
+    #TamSayfaYeniUrunlerBaslikAlani {
+        font-size: 12px;
+    }
+}
+
+div.example {
+    margin: auto;
+    color: #08C;
+}
+
+@media screen and (min-width: 601px) {
+    div.example {
+        font-size: 80px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    div.example {
+        font-size: 30px;
+    }
+}
+
+#TamSayfaYeniUrunlerAlani {
+    position: relative;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: center;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    #TamSayfaYeniUrunlerAlani {
+        width: 1175px;
+        min-width: 1175px;
+        max-width: 1175px;
+    }
+}
+
+@media only screen and (max-width:1199px) { /* L, M, S, XS */
+    #TamSayfaYeniUrunlerAlani {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.input-container {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.icon {
+    padding: 10px;
+    background: dodgerblue;
+    color: white;
+    min-width: 50px;
+    text-align: center;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+}
+
+    .input-field:focus {
+        border: 2px solid dodgerblue;
+    }
+
+/* Set a style for the submit button */
+.btn {
+    background-color: dodgerblue;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+    .btn:hover {
+        opacity: 1;
+    }
+
+/*TABLE*/
+.custab {
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 5% 0;
+    box-shadow: 3px 3px 2px #ccc;
+    transition: 0.5s;
+}
+
+    .custab:hover {
+        box-shadow: 3px 3px 0px transparent;
+        transition: 0.5s;
+    }
+
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.listWrap {
+    width: 1200px;
+}
+
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: table;
+    white-space: nowrap;
+    width: 100%;
+}
+
+    .list li {
+        background-color: #f0f0f0;
+        display: table-row;
+        color: #5c5c5c;
+    }
+
+        .list li:nth-child(odd) {
+            background-color: #f2f2f2;
+            display: table-row;
+            font-size: 9pt;
+            color: #5c5c5c;
+        }
+
+            .list li:nth-child(odd):hover {
+                background-color: #dadada;
+            }
+
+        .list li:nth-child(even) {
+            background-color: #e8e8e8;
+            display: table-row;
+            font-size: 9pt;
+            color: #5c5c5c;
+        }
+
+            .list li:nth-child(even):hover {
+                background-color: #dadada;
+            }
+
+        .list li:nth-child(1) span:first-child {
+            border-top-left-radius: 6px;
+        }
+
+        .list li:nth-child(1) span:last-child {
+            border-top-right-radius: 6px;
+        }
+
+
+        .list li:nth-child(1) {
+            background-color: green;
+            text-transform: uppercase;
+            font-size: 8pt;
+            font-weight: bold;
+            color: #b8b5c0;
+        }
+
+            .list li:nth-child(1):hover {
+            }
+
+
+
+            .list li:nth-child(1) span {
+                border-bottom: 2px solid #7d5bbe;
+                padding: 14px;
+            }
+
+    .list span {
+        text-align: left;
+        display: table-cell;
+        padding: 6px;
+        vertical-align: middle;
+    }
+
+
+        .list span:nth-child(2) {
+        }
+
+input[type="file"] {
+    cursor: pointer !Important;
+    font: 300 14px sans-serif;
+    color: white;
+}
+
+    input[type="file"]::-webkit-file-upload-button {
+        font: 300 14px sans-serif;
+        background: #08C;
+        border: 0;
+        padding: 12px 25px;
+        cursor: pointer;
+        color: #fff;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    input[type="file"]::-ms-browse {
+        font: 300 14px 'Roboto', sans-serif;
+        background: #009688;
+        border: 0;
+        padding: 12px 25px;
+        cursor: pointer;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+#myInput {
+    background-image: url('../img/searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+#myTable {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 18px;
+}
+
+    #myTable th, #myTable td {
+        text-align: left;
+        padding: 12px;
+    }
+
+    #myTable tr {
+        border-bottom: 1px solid #08C;
+    }
+
+        #myTable tr.header, #myTable tr:hover {
+            background-color: #08C;
+        }
+
+        #myTable tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #myTable tr:hover {
+            background-color: #08C;
+        }
+
+#TamSayfaDortluBannerAlani {
+    position: relative;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: center;
+    vertical-align: top;
+}
+
+.sil {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    #TamSayfaDortluBannerAlani {
+        width: 1175px;
+        min-width: 1175px;
+        max-width: 1175px;
+    }
+}
+
+@media only screen and (max-width:1199px) { /* L, M, S, XS */
+    #TamSayfaDortluBannerAlani {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
+
+#TamSayfaDortluBannerDengelemeAlani {
+    position: relative;
+    display: block;
+    float: left;
+    width: -webkit-calc(100% + 20px);
+    width: -moz-calc(100% + 20px);
+    width: -o-calc(100% + 20px);
+    width: -ms-calc(100% + 20px);
+    width: calc(100% + 20px);
+    min-width: -webkit-calc(100% + 20px);
+    min-width: -moz-calc(100% + 20px);
+    min-width: -o-calc(100% + 20px);
+    min-width: -ms-calc(100% + 20px);
+    min-width: calc(100% + 20px);
+    max-width: -webkit-calc(100% + 20px);
+    max-width: -moz-calc(100% + 20px);
+    max-width: -o-calc(100% + 20px);
+    max-width: -ms-calc(100% + 20px);
+    max-width: calc(100% + 20px);
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    top: 0;
+    left: -10px;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: center;
+    vertical-align: top;
+}
+
+.TamSayfaDortluBannerSinirlamaAlani {
+    display: inline-block;
+    float: left;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: center;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:992px) { /* XL, L */
+    .TamSayfaDortluBannerSinirlamaAlani {
+        width: -webkit-calc(25% - 20px);
+        width: -moz-calc(25% - 20px);
+        width: -o-calc(25% - 20px);
+        width: -ms-calc(25% - 20px);
+        width: calc(25% - 20px);
+        min-width: -webkit-calc(25% - 20px);
+        min-width: -moz-calc(25% - 20px);
+        min-width: -o-calc(25% - 20px);
+        min-width: -ms-calc(25% - 20px);
+        min-width: calc(25% - 20px);
+        max-width: -webkit-calc(25% - 20px);
+        max-width: -moz-calc(25% - 20px);
+        max-width: -o-calc(25% - 20px);
+        max-width: -ms-calc(25% - 20px);
+        max-width: calc(25% - 20px);
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    .TamSayfaDortluBannerSinirlamaAlani {
+        width: -webkit-calc(50% - 20px);
+        width: -moz-calc(50% - 20px);
+        width: -o-calc(50% - 20px);
+        width: -ms-calc(50% - 20px);
+        width: calc(50% - 20px);
+        min-width: -webkit-calc(50% - 20px);
+        min-width: -moz-calc(50% - 20px);
+        min-width: -o-calc(50% - 20px);
+        min-width: -ms-calc(50% - 20px);
+        min-width: calc(50% - 20px);
+        max-width: -webkit-calc(50% - 20px);
+        max-width: -moz-calc(50% - 20px);
+        max-width: -o-calc(50% - 20px);
+        max-width: -ms-calc(50% - 20px);
+        max-width: calc(50% - 20px);
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media only screen and (max-width:767px) { /* S, XS */
+    .TamSayfaDortluBannerSinirlamaAlani {
+        width: -webkit-calc(100% - 20px);
+        width: -moz-calc(100% - 20px);
+        width: -o-calc(100% - 20px);
+        width: -ms-calc(100% - 20px);
+        width: calc(100% - 20px);
+        min-width: -webkit-calc(100% - 20px);
+        min-width: -moz-calc(100% - 20px);
+        min-width: -o-calc(100% - 20px);
+        min-width: -ms-calc(100% - 20px);
+        min-width: calc(100% - 20px);
+        max-width: -webkit-calc(100% - 20px);
+        max-width: -moz-calc(100% - 20px);
+        max-width: -o-calc(100% - 20px);
+        max-width: -ms-calc(100% - 20px);
+        max-width: calc(100% - 20px);
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.TamSayfaDortluBannerResmi {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    padding: 3px;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    font-size: 0;
+    text-align: center;
+    vertical-align: top;
+}
+
+    .TamSayfaDortluBannerResmi img {
+        display: block;
+        width: 75px;
+        min-width: 75px;
+        max-width: 75px;
+        height: 75px;
+        min-height: 75px;
+        max-height: 75px;
+        margin: 0 auto;
+        padding: 0;
+        border: none;
+        outline: none;
+    }
+
+.TamSayfaDortluBannerBaslikMetni {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 5px;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #08A;
+    line-height: 120%;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaDortluBannerBaslikMetni {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaDortluBannerBaslikMetni {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width:991px) { /* M, S, XS */
+    .TamSayfaDortluBannerBaslikMetni {
+        font-size: 12px;
+    }
+}
+
+.TamSayfaDortluBannerIcerikMetni {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 5px;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    line-height: 120%;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaDortluBannerIcerikMetni {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaDortluBannerIcerikMetni {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width:991px) { /* M, S, XS */
+    .TamSayfaDortluBannerIcerikMetni {
+        font-size: 12px;
+    }
+}
+
+#UrunDetaySayfalariResimUrunBaslikFiyatVeIslemAlanlari {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: center;
+    vertical-align: top;
+}
+
+#UrunDetaySayfalariResimlerAlani {
+    position: relative;
+    display: inline-block;
+    float: left;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: center;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    #UrunDetaySayfalariResimlerAlani {
+        width: -webkit-calc(30% - 10px);
+        width: -moz-calc(30% - 10px);
+        width: -o-calc(30% - 10px);
+        width: -ms-calc(30% - 10px);
+        width: calc(30% - 10px);
+        min-width: -webkit-calc(30% - 10px);
+        min-width: -moz-calc(30% - 10px);
+        min-width: -o-calc(30% - 10px);
+        min-width: -ms-calc(30% - 10px);
+        min-width: calc(30% - 10px);
+        max-width: -webkit-calc(30% - 10px);
+        max-width: -moz-calc(30% - 10px);
+        max-width: -o-calc(30% - 10px);
+        max-width: -ms-calc(30% - 10px);
+        max-width: calc(30% - 10px);
+        padding-right: 10px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    #UrunDetaySayfalariResimlerAlani {
+        width: -webkit-calc(32% - 9px);
+        width: -moz-calc(32% - 9px);
+        width: -o-calc(32% - 9px);
+        width: -ms-calc(32% - 9px);
+        width: calc(32% - 9px);
+        min-width: -webkit-calc(32% - 9px);
+        min-width: -moz-calc(32% - 9px);
+        min-width: -o-calc(32% - 9px);
+        min-width: -ms-calc(32% - 9px);
+        min-width: calc(32% - 9px);
+        max-width: -webkit-calc(32% - 9px);
+        max-width: -moz-calc(32% - 9px);
+        max-width: -o-calc(32% - 9px);
+        max-width: -ms-calc(32% - 9px);
+        max-width: calc(32% - 9px);
+        padding-right: 9px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    #UrunDetaySayfalariResimlerAlani {
+        width: -webkit-calc(34% - 8px);
+        width: -moz-calc(34% - 8px);
+        width: -o-calc(34% - 8px);
+        width: -ms-calc(34% - 8px);
+        width: calc(34% - 8px);
+        min-width: -webkit-calc(34% - 8px);
+        min-width: -moz-calc(34% - 8px);
+        min-width: -o-calc(34% - 8px);
+        min-width: -ms-calc(34% - 8px);
+        min-width: calc(34% - 8px);
+        max-width: -webkit-calc(34% - 8px);
+        max-width: -moz-calc(34% - 8px);
+        max-width: -o-calc(34% - 8px);
+        max-width: -ms-calc(34% - 8px);
+        max-width: calc(34% - 8px);
+        padding-right: 8px;
+    }
+}
+
+@media only screen and (max-width:767px) { /* S, XS */
+    #UrunDetaySayfalariResimlerAlani {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
+
+#UrunDetaySayfalariBuyukResimAlani {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: center;
+    vertical-align: top;
+}
+
+#UrunDetaySayfalariBuyukResimDisCercevesi {
+    display: block;
+    width: -webkit-calc(100% - 8px);
+    width: -moz-calc(100% - 8px);
+    width: -o-calc(100% - 8px);
+    width: -ms-calc(100% - 8px);
+    width: calc(100% - 8px);
+    min-width: -webkit-calc(100% - 8px);
+    min-width: -moz-calc(100% - 8px);
+    min-width: -o-calc(100% - 8px);
+    min-width: -ms-calc(100% - 8px);
+    min-width: calc(100% - 8px);
+    max-width: -webkit-calc(100% - 8px);
+    max-width: -moz-calc(100% - 8px);
+    max-width: -o-calc(100% - 8px);
+    max-width: -ms-calc(100% - 8px);
+    max-width: calc(100% - 8px);
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    padding: 3px;
+    overflow: hidden;
+    border: none;
+    border: 1px solid #CCC;
+    outline: none;
+    background-color: #FFF;
+    text-align: center;
+    vertical-align: top;
+}
+
+    #UrunDetaySayfalariBuyukResimDisCercevesi img {
+        display: block;
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding: 0;
+        border: none;
+        outline: none;
+    }
+
+#UrunDetaySayfalariKucukResimlerAlani {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 4px;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: center;
+    vertical-align: top;
+}
+
+#UrunDetaySayfalariKucukResimlerDengelemeAlani {
+    position: relative;
+    display: block;
+    float: left;
+    width: -webkit-calc(100% + 4px);
+    width: -moz-calc(100% + 4px);
+    width: -o-calc(100% + 4px);
+    width: -ms-calc(100% + 4px);
+    width: calc(100% + 4px);
+    min-width: -webkit-calc(100% + 4px);
+    min-width: -moz-calc(100% + 4px);
+    min-width: -o-calc(100% + 4px);
+    min-width: -ms-calc(100% + 4px);
+    min-width: calc(100% + 4px);
+    max-width: -webkit-calc(100% + 4px);
+    max-width: -moz-calc(100% + 4px);
+    max-width: -o-calc(100% + 4px);
+    max-width: -ms-calc(100% + 4px);
+    max-width: calc(100% + 4px);
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    top: 0;
+    left: -2px;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: center;
+    vertical-align: top;
+}
+
+.UrunDetaySayfalariKucukResimSinirlamaAlani {
+    display: inline-block;
+    float: left;
+    width: -webkit-calc(25% - 4px);
+    width: -moz-calc(25% - 4px);
+    width: -o-calc(25% - 4px);
+    width: -ms-calc(25% - 4px);
+    width: calc(25% - 4px);
+    min-width: -webkit-calc(25% - 4px);
+    min-width: -moz-calc(25% - 4px);
+    min-width: -o-calc(25% - 4px);
+    min-width: -ms-calc(25% - 4px);
+    min-width: calc(25% - 4px);
+    max-width: -webkit-calc(25% - 4px);
+    max-width: -moz-calc(25% - 4px);
+    max-width: -o-calc(25% - 4px);
+    max-width: -ms-calc(25% - 4px);
+    max-width: calc(25% - 4px);
+    margin: 0 auto;
+    margin-right: 2px;
+    margin-left: 2px;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: center;
+    vertical-align: top;
+}
+
+.UrunDetaySayfalariKucukResimDisCercevesi {
+    display: block;
+    width: -webkit-calc(100% - 2px);
+    width: -moz-calc(100% - 2px);
+    width: -o-calc(100% - 2px);
+    width: -ms-calc(100% - 2px);
+    width: calc(100% - 2px);
+    min-width: -webkit-calc(100% - 2px);
+    min-width: -moz-calc(100% - 2px);
+    min-width: -o-calc(100% - 2px);
+    min-width: -ms-calc(100% - 2px);
+    min-width: calc(100% - 2px);
+    max-width: -webkit-calc(100% - 2px);
+    max-width: -moz-calc(100% - 2px);
+    max-width: -o-calc(100% - 2px);
+    max-width: -ms-calc(100% - 2px);
+    max-width: calc(100% - 2px);
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    border: 1px solid #CCC;
+    outline: none;
+    background-color: #FFF;
+    text-align: center;
+    vertical-align: top;
+}
+
+    .UrunDetaySayfalariKucukResimDisCercevesi img {
+        display: block;
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding: 0;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+#UrunDetaySayfalariBaslikVeIslemlerAlani {
+    position: relative;
+    display: inline-block;
+    float: left;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: center;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    #UrunDetaySayfalariBaslikVeIslemlerAlani {
+        width: 70%;
+        min-width: 70%;
+        max-width: 70%;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    #UrunDetaySayfalariBaslikVeIslemlerAlani {
+        width: 68%;
+        min-width: 68%;
+        max-width: 68%;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    #UrunDetaySayfalariBaslikVeIslemlerAlani {
+        width: 64%;
+        min-width: 64%;
+        max-width: 64%;
+    }
+}
+
+@media only screen and (max-width:767px) { /* S, XS */
+    #UrunDetaySayfalariBaslikVeIslemlerAlani {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        padding-top: 5px;
+    }
+}
+
+#UrunDetaySayfalariUrunBasligiAlani {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #000;
+    line-height: 120%;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 600;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    #UrunDetaySayfalariUrunBasligiAlani {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    #UrunDetaySayfalariUrunBasligiAlani {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width:991px) { /* M, S, XS */
+    #UrunDetaySayfalariUrunBasligiAlani {
+        font-size: 14px;
+    }
+}
+
+#UrunDetaySayfalariUrunMarkasiAlani {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    padding-bottom: 10px;
+    overflow: hidden;
+    border: none;
+    border-bottom: 1px solid #CCC;
+    outline: none;
+    background-color: #FFF;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #F90;
+    line-height: 120%;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    #UrunDetaySayfalariUrunMarkasiAlani {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    #UrunDetaySayfalariUrunMarkasiAlani {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width:991px) { /* M, S, XS */
+    #UrunDetaySayfalariUrunMarkasiAlani {
+        font-size: 12px;
+    }
+}
+
+#UrunDetaySayfalariPaylasVeSepeteEkleButonlariAlani {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: 35px;
+    min-height: 35px;
+    max-height: 35px;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: center;
+    vertical-align: top;
+}
+
+#UrunDetaySayfalariFacebookPaylasButonuAlani {
+    display: inline-block;
+    float: left;
+    width: 24px;
+    min-width: 24px;
+    max-width: 24px;
+    height: auto;
+    margin: 0 auto;
+    margin-right: 5px;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: center;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+    #UrunDetaySayfalariFacebookPaylasButonuAlani img {
+        display: block;
+        width: 24px;
+        min-width: 24px;
+        max-width: 24px;
+        height: 24;
+        min-height: 24;
+        max-height: 24;
+        margin: 0 auto;
+        margin-top: 4px;
+        padding: 0;
+        border: none;
+        outline: none;
+    }
+
+#UrunDetaySayfalariTwitterPaylasButonuAlani {
+    display: inline-block;
+    float: left;
+    width: 24px;
+    min-width: 24px;
+    max-width: 24px;
+    height: auto;
+    margin: 0 auto;
+    margin-right: 5px;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: center;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+    #UrunDetaySayfalariTwitterPaylasButonuAlani img {
+        display: block;
+        width: 24px;
+        min-width: 24px;
+        max-width: 24px;
+        height: 24;
+        min-height: 24;
+        max-height: 24;
+        margin: 0 auto;
+        margin-top: 4px;
+        padding: 0;
+        border: none;
+        outline: none;
+    }
+
+#UrunDetaySayfalariFavoriListesineEkleButonuAlani {
+    display: inline-block;
+    float: left;
+    width: 24px;
+    min-width: 24px;
+    max-width: 24px;
+    height: auto;
+    margin: 0 auto;
+    margin-right: 5px;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: center;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+    #UrunDetaySayfalariFavoriListesineEkleButonuAlani img {
+        display: block;
+        width: 24px;
+        min-width: 24px;
+        max-width: 24px;
+        height: 24;
+        min-height: 24;
+        max-height: 24;
+        margin: 0 auto;
+        margin-top: 4px;
+        padding: 0;
+        border: none;
+        outline: none;
+    }
+
+#UrunDetaySayfalariSepeteEkleButonuAlani {
+    display: inline-block;
+    float: right;
+    width: -webkit-calc(100% - 87px);
+    width: -moz-calc(100% - 87px);
+    width: -o-calc(100% - 87px);
+    width: -ms-calc(100% - 87px);
+    width: calc(100% - 87px);
+    min-width: -webkit-calc(100% - 87px);
+    min-width: -moz-calc(100% - 87px);
+    min-width: -o-calc(100% - 87px);
+    min-width: -ms-calc(100% - 87px);
+    min-width: calc(100% - 87px);
+    max-width: -webkit-calc(100% - 87px);
+    max-width: -moz-calc(100% - 87px);
+    max-width: -o-calc(100% - 87px);
+    max-width: -ms-calc(100% - 87px);
+    max-width: calc(100% - 87px);
+    height: 35px;
+    min-height: 35px;
+    max-height: 35px;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    outline: none;
+    background-color: #08C;
+    vertical-align: top;
+    text-align: center;
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+}
+
+    #UrunDetaySayfalariSepeteEkleButonuAlani:hover {
+        display: inline-block;
+        float: right;
+        width: -webkit-calc(100% - 87px);
+        width: -moz-calc(100% - 87px);
+        width: -o-calc(100% - 87px);
+        width: -ms-calc(100% - 87px);
+        width: calc(100% - 87px);
+        min-width: -webkit-calc(100% - 87px);
+        min-width: -moz-calc(100% - 87px);
+        min-width: -o-calc(100% - 87px);
+        min-width: -ms-calc(100% - 87px);
+        min-width: calc(100% - 87px);
+        max-width: -webkit-calc(100% - 87px);
+        max-width: -moz-calc(100% - 87px);
+        max-width: -o-calc(100% - 87px);
+        max-width: -ms-calc(100% - 87px);
+        max-width: calc(100% - 87px);
+        height: 35px;
+        min-height: 35px;
+        max-height: 35px;
+        margin: 0 auto;
+        padding: 0;
+        overflow: hidden;
+        border: none;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -o-border-radius: 3px;
+        -ms-border-radius: 3px;
+        border-radius: 3px;
+        outline: none;
+        background-color: #0AF;
+        vertical-align: top;
+        text-align: center;
+        -webkit-transition: all 500ms ease-in-out;
+        -moz-transition: all 500ms ease-in-out;
+        -o-transition: all 500ms ease-in-out;
+        -ms-transition: all 500ms ease-in-out;
+        transition: all 500ms ease-in-out;
+    }
+
+#UrunDetaySayfalariSepeteEkleButonuMetni {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #FFF;
+    line-height: 120%;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    #UrunDetaySayfalariSepeteEkleButonuMetni {
+        font-size: 18px;
+        padding-top: 7px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    #UrunDetaySayfalariSepeteEkleButonuMetni {
+        font-size: 16px;
+        padding-top: 9px;
+    }
+}
+
+@media only screen and (max-width:991px) { /* M, S, XS */
+    #UrunDetaySayfalariSepeteEkleButonuMetni {
+        font-size: 14px;
+        padding-top: 9px;
+    }
+}
+
+#UrunDetaySayfalariSepeteEkleButonuIconu {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    margin-right: 10px;
+    padding: 0;
+    padding-top: 7px;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+    #UrunDetaySayfalariSepeteEkleButonuIconu img {
+        display: block;
+        width: 21px;
+        min-width: 21px;
+        max-width: 21px;
+        height: 20px;
+        min-height: 20px;
+        max-height: 20px;
+        margin: 0 auto;
+        padding: 0;
+        border: none;
+        outline: none;
+    }
+
+#UrunDetaySayfalariUrunVaryantVeFiyatAlani {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: center;
+    vertical-align: top;
+}
+
+#UrunDetaySayfalariUrunVaryantlarAlani {
+    height: 35px;
+    min-height: 35px;
+    max-height: 35px;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: left;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    #UrunDetaySayfalariUrunVaryantlarAlani {
+        display: inline-block;
+        float: left;
+        width: 300px;
+        min-width: 300px;
+        max-width: 300px;
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    #UrunDetaySayfalariUrunVaryantlarAlani {
+        display: inline-block;
+        float: left;
+        width: 250px;
+        min-width: 250px;
+        max-width: 250px;
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    #UrunDetaySayfalariUrunVaryantlarAlani {
+        display: inline-block;
+        float: left;
+        width: 200px;
+        min-width: 200px;
+        max-width: 200px;
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (max-width:767px) { /* S, XS */
+    #UrunDetaySayfalariUrunVaryantlarAlani {
+        display: block;
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
+
+#UrunDetaySayfalariUrunFiyatlandirmaAlani {
+    height: 35px;
+    min-height: 35px;
+    max-height: 35px;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: right;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    #UrunDetaySayfalariUrunFiyatlandirmaAlani {
+        display: inline-block;
+        float: right;
+        width: -webkit-calc(100% - 310px);
+        width: -moz-calc(100% - 310px);
+        width: -o-calc(100% - 310px);
+        width: -ms-calc(100% - 310px);
+        width: calc(100% - 310px);
+        min-width: -webkit-calc(100% - 310px);
+        min-width: -moz-calc(100% - 310px);
+        min-width: -o-calc(100% - 310px);
+        min-width: -ms-calc(100% - 310px);
+        min-width: calc(100% - 310px);
+        max-width: -webkit-calc(100% - 310px);
+        max-width: -moz-calc(100% - 310px);
+        max-width: -o-calc(100% - 310px);
+        max-width: -ms-calc(100% - 310px);
+        max-width: calc(100% - 310px);
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    #UrunDetaySayfalariUrunFiyatlandirmaAlani {
+        display: inline-block;
+        float: right;
+        width: -webkit-calc(100% - 260px);
+        width: -moz-calc(100% - 260px);
+        width: -o-calc(100% - 260px);
+        width: -ms-calc(100% - 260px);
+        width: calc(100% - 260px);
+        min-width: -webkit-calc(100% - 260px);
+        min-width: -moz-calc(100% - 260px);
+        min-width: -o-calc(100% - 260px);
+        min-width: -ms-calc(100% - 260px);
+        min-width: calc(100% - 260px);
+        max-width: -webkit-calc(100% - 260px);
+        max-width: -moz-calc(100% - 260px);
+        max-width: -o-calc(100% - 260px);
+        max-width: -ms-calc(100% - 260px);
+        max-width: calc(100% - 260px);
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    #UrunDetaySayfalariUrunFiyatlandirmaAlani {
+        display: inline-block;
+        float: right;
+        width: -webkit-calc(100% - 210px);
+        width: -moz-calc(100% - 210px);
+        width: -o-calc(100% - 210px);
+        width: -ms-calc(100% - 210px);
+        width: calc(100% - 210px);
+        min-width: -webkit-calc(100% - 210px);
+        min-width: -moz-calc(100% - 210px);
+        min-width: -o-calc(100% - 210px);
+        min-width: -ms-calc(100% - 210px);
+        min-width: calc(100% - 210px);
+        max-width: -webkit-calc(100% - 210px);
+        max-width: -moz-calc(100% - 210px);
+        max-width: -o-calc(100% - 210px);
+        max-width: -ms-calc(100% - 210px);
+        max-width: calc(100% - 210px);
+    }
+}
+
+@media only screen and (max-width:767px) { /* S, XS */
+    #UrunDetaySayfalariUrunFiyatlandirmaAlani {
+        display: block;
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        margin-top: 10px;
+    }
+}
+
+.UrunDetaySayfasiUrunFiyatiAlani {
+    display: inline-block;
+    float: right;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    margin-right: 10px;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    line-height: 120%;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 800;
+    text-align: left;
+    text-decoration: none;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .UrunDetaySayfasiUrunFiyatiAlani {
+        font-size: 26px;
+        padding-top: 3px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .UrunDetaySayfasiUrunFiyatiAlani {
+        font-size: 24px;
+        padding-top: 3px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    .UrunDetaySayfasiUrunFiyatiAlani {
+        font-size: 22px;
+        padding-top: 4px;
+    }
+}
+
+@media only screen and (max-width:767px) { /* S, XS */
+    .UrunDetaySayfasiUrunFiyatiAlani {
+        font-size: 22px;
+    }
+}
+
+#UrunDetaySayfalariUrununKargoIslemleriDetayAlani {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+#UrunDetaySayfalariUrununKargoIslemleriResimAlani {
+    display: inline-block;
+    float: left;
+    width: 20px;
+    min-width: 20px;
+    max-width: 20px;
+    height: auto;
+    margin: 0 auto;
+    margin-right: 10px;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: left;
+    text-decoration: none;
+}
+
+    #UrunDetaySayfalariUrununKargoIslemleriResimAlani img {
+        display: block;
+        width: 20px;
+        min-width: 20px;
+        max-width: 20px;
+        height: 20px;
+        min-height: 20px;
+        max-height: 20px;
+        margin: 0 auto;
+        padding: 0;
+        border: none;
+        outline: none;
+    }
+
+#UrunDetaySayfalariUrununKargoIslemleriMetni {
+    display: inline-block;
+    float: right;
+    width: -webkit-calc(100% - 30px);
+    width: -moz-calc(100% - 30px);
+    width: -o-calc(100% - 30px);
+    width: -ms-calc(100% - 30px);
+    width: calc(100% - 30px);
+    min-width: -webkit-calc(100% - 30px);
+    min-width: -moz-calc(100% - 30px);
+    min-width: -o-calc(100% - 30px);
+    min-width: -ms-calc(100% - 30px);
+    min-width: calc(100% - 30px);
+    max-width: -webkit-calc(100% - 30px);
+    max-width: -moz-calc(100% - 30px);
+    max-width: -o-calc(100% - 30px);
+    max-width: -ms-calc(100% - 30px);
+    max-width: calc(100% - 30px);
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    line-height: 120%;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-align: left;
+    text-decoration: none;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    #UrunDetaySayfalariUrununKargoIslemleriMetni {
+        font-size: 14px;
+        padding-top: 1px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    #UrunDetaySayfalariUrununKargoIslemleriMetni {
+        font-size: 13px;
+        padding-top: 2px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    #UrunDetaySayfalariUrununKargoIslemleriMetni {
+        font-size: 12px;
+        padding-top: 3px;
+    }
+}
+
+@media only screen and (max-width:767px) { /* S, XS */
+    #UrunDetaySayfalariUrununKargoIslemleriMetni {
+        font-size: 12px;
+        padding-top: 3px;
+    }
+}
+
+#UrunDetaySayfalariUrununHizliGonderiDetayAlani {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+#UrunDetaySayfalariUrununHizliGonderiResimAlani {
+    display: inline-block;
+    float: left;
+    width: 20px;
+    min-width: 20px;
+    max-width: 20px;
+    height: auto;
+    margin: 0 auto;
+    margin-right: 10px;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: left;
+    text-decoration: none;
+}
+
+    #UrunDetaySayfalariUrununHizliGonderiResimAlani img {
+        display: block;
+        width: 20px;
+        min-width: 20px;
+        max-width: 20px;
+        height: 20px;
+        min-height: 20px;
+        max-height: 20px;
+        margin: 0 auto;
+        padding: 0;
+        border: none;
+        outline: none;
+    }
+
+#UrunDetaySayfalariUrununHizliGonderiMetni {
+    display: inline-block;
+    float: right;
+    width: -webkit-calc(100% - 30px);
+    width: -moz-calc(100% - 30px);
+    width: -o-calc(100% - 30px);
+    width: -ms-calc(100% - 30px);
+    width: calc(100% - 30px);
+    min-width: -webkit-calc(100% - 30px);
+    min-width: -moz-calc(100% - 30px);
+    min-width: -o-calc(100% - 30px);
+    min-width: -ms-calc(100% - 30px);
+    min-width: calc(100% - 30px);
+    max-width: -webkit-calc(100% - 30px);
+    max-width: -moz-calc(100% - 30px);
+    max-width: -o-calc(100% - 30px);
+    max-width: -ms-calc(100% - 30px);
+    max-width: calc(100% - 30px);
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    line-height: 120%;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-align: left;
+    text-decoration: none;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    #UrunDetaySayfalariUrununHizliGonderiMetni {
+        font-size: 14px;
+        padding-top: 1px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    #UrunDetaySayfalariUrununHizliGonderiMetni {
+        font-size: 13px;
+        padding-top: 2px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    #UrunDetaySayfalariUrununHizliGonderiMetni {
+        font-size: 12px;
+        padding-top: 3px;
+    }
+}
+
+@media only screen and (max-width:767px) { /* S, XS */
+    #UrunDetaySayfalariUrununHizliGonderiMetni {
+        font-size: 12px;
+        padding-top: 3px;
+    }
+}
+
+#UrunDetaySayfalariUrununKrediKartiDetayAlani {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+#UrunDetaySayfalariUrununKrediKartiResimAlani {
+    display: inline-block;
+    float: left;
+    width: 20px;
+    min-width: 20px;
+    max-width: 20px;
+    height: auto;
+    margin: 0 auto;
+    margin-right: 10px;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: left;
+    text-decoration: none;
+}
+
+    #UrunDetaySayfalariUrununKrediKartiResimAlani img {
+        display: block;
+        width: 20px;
+        min-width: 20px;
+        max-width: 20px;
+        height: 20px;
+        min-height: 20px;
+        max-height: 20px;
+        margin: 0 auto;
+        padding: 0;
+        border: none;
+        outline: none;
+    }
+
+#UrunDetaySayfalariUrununKrediKartiMetni {
+    display: inline-block;
+    float: right;
+    width: -webkit-calc(100% - 30px);
+    width: -moz-calc(100% - 30px);
+    width: -o-calc(100% - 30px);
+    width: -ms-calc(100% - 30px);
+    width: calc(100% - 30px);
+    min-width: -webkit-calc(100% - 30px);
+    min-width: -moz-calc(100% - 30px);
+    min-width: -o-calc(100% - 30px);
+    min-width: -ms-calc(100% - 30px);
+    min-width: calc(100% - 30px);
+    max-width: -webkit-calc(100% - 30px);
+    max-width: -moz-calc(100% - 30px);
+    max-width: -o-calc(100% - 30px);
+    max-width: -ms-calc(100% - 30px);
+    max-width: calc(100% - 30px);
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    line-height: 120%;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-align: left;
+    text-decoration: none;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    #UrunDetaySayfalariUrununKrediKartiMetni {
+        font-size: 14px;
+        padding-top: 1px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    #UrunDetaySayfalariUrununKrediKartiMetni {
+        font-size: 13px;
+        padding-top: 2px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    #UrunDetaySayfalariUrununKrediKartiMetni {
+        font-size: 12px;
+        padding-top: 3px;
+    }
+}
+
+@media only screen and (max-width:767px) { /* S, XS */
+    #UrunDetaySayfalariUrununKrediKartiMetni {
+        font-size: 12px;
+        padding-top: 3px;
+    }
+}
+
+#UrunDetaySayfalariUrununMobilOdemeDetayAlani {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+#UrunDetaySayfalariUrununMobilOdemeResimAlani {
+    display: inline-block;
+    float: left;
+    width: 20px;
+    min-width: 20px;
+    max-width: 20px;
+    height: auto;
+    margin: 0 auto;
+    margin-right: 10px;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: left;
+    text-decoration: none;
+}
+
+    #UrunDetaySayfalariUrununMobilOdemeResimAlani img {
+        display: block;
+        width: 20px;
+        min-width: 20px;
+        max-width: 20px;
+        height: 20px;
+        min-height: 20px;
+        max-height: 20px;
+        margin: 0 auto;
+        padding: 0;
+        border: none;
+        outline: none;
+    }
+
+#UrunDetaySayfalariUrununMobilOdemeMetni {
+    display: inline-block;
+    float: right;
+    width: -webkit-calc(100% - 30px);
+    width: -moz-calc(100% - 30px);
+    width: -o-calc(100% - 30px);
+    width: -ms-calc(100% - 30px);
+    width: calc(100% - 30px);
+    min-width: -webkit-calc(100% - 30px);
+    min-width: -moz-calc(100% - 30px);
+    min-width: -o-calc(100% - 30px);
+    min-width: -ms-calc(100% - 30px);
+    min-width: calc(100% - 30px);
+    max-width: -webkit-calc(100% - 30px);
+    max-width: -moz-calc(100% - 30px);
+    max-width: -o-calc(100% - 30px);
+    max-width: -ms-calc(100% - 30px);
+    max-width: calc(100% - 30px);
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    line-height: 120%;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-align: left;
+    text-decoration: none;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    #UrunDetaySayfalariUrununMobilOdemeMetni {
+        font-size: 14px;
+        padding-top: 1px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    #UrunDetaySayfalariUrununMobilOdemeMetni {
+        font-size: 13px;
+        padding-top: 2px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    #UrunDetaySayfalariUrununMobilOdemeMetni {
+        font-size: 12px;
+        padding-top: 3px;
+    }
+}
+
+@media only screen and (max-width:767px) { /* S, XS */
+    #UrunDetaySayfalariUrununMobilOdemeMetni {
+        font-size: 12px;
+        padding-top: 3px;
+    }
+}
+
+#UrunDetaySayfalariUrununBankaHavalesiDetayAlani {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+#UrunDetaySayfalariUrununBankaHavalesiResimAlani {
+    display: inline-block;
+    float: left;
+    width: 20px;
+    min-width: 20px;
+    max-width: 20px;
+    height: auto;
+    margin: 0 auto;
+    margin-right: 10px;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: left;
+    text-decoration: none;
+}
+
+    #UrunDetaySayfalariUrununBankaHavalesiResimAlani img {
+        display: block;
+        width: 20px;
+        min-width: 20px;
+        max-width: 20px;
+        height: 20px;
+        min-height: 20px;
+        max-height: 20px;
+        margin: 0 auto;
+        padding: 0;
+        border: none;
+        outline: none;
+    }
+
+#UrunDetaySayfalariUrununBankaHavalesiMetni {
+    display: inline-block;
+    float: right;
+    width: -webkit-calc(100% - 30px);
+    width: -moz-calc(100% - 30px);
+    width: -o-calc(100% - 30px);
+    width: -ms-calc(100% - 30px);
+    width: calc(100% - 30px);
+    min-width: -webkit-calc(100% - 30px);
+    min-width: -moz-calc(100% - 30px);
+    min-width: -o-calc(100% - 30px);
+    min-width: -ms-calc(100% - 30px);
+    min-width: calc(100% - 30px);
+    max-width: -webkit-calc(100% - 30px);
+    max-width: -moz-calc(100% - 30px);
+    max-width: -o-calc(100% - 30px);
+    max-width: -ms-calc(100% - 30px);
+    max-width: calc(100% - 30px);
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    line-height: 120%;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-align: left;
+    text-decoration: none;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    #UrunDetaySayfalariUrununBankaHavalesiMetni {
+        font-size: 14px;
+        padding-top: 1px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    #UrunDetaySayfalariUrununBankaHavalesiMetni {
+        font-size: 13px;
+        padding-top: 2px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    #UrunDetaySayfalariUrununBankaHavalesiMetni {
+        font-size: 12px;
+        padding-top: 3px;
+    }
+}
+
+@media only screen and (max-width:767px) { /* S, XS */
+    #UrunDetaySayfalariUrununBankaHavalesiMetni {
+        font-size: 12px;
+        padding-top: 3px;
+    }
+}
+
+#UrunDetaySayfalariUrununAciklamaAlani {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: noe;
+    background-color: #FFF;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+#UrunDetaySayfalariUrununAciklamaBaslikMetni {
+    display: block;
+    width: -webkit-calc(100% - 10px);
+    width: -moz-calc(100% - 10px);
+    width: -o-calc(100% - 10px);
+    width: -ms-calc(100% - 10px);
+    width: calc(100% - 10px);
+    min-width: -webkit-calc(100% - 10px);
+    min-width: -moz-calc(100% - 10px);
+    min-width: -o-calc(100% - 10px);
+    min-width: -ms-calc(100% - 10px);
+    min-width: calc(100% - 10px);
+    max-width: -webkit-calc(100% - 10px);
+    max-width: -moz-calc(100% - 10px);
+    max-width: -o-calc(100% - 10px);
+    max-width: -ms-calc(100% - 10px);
+    max-width: calc(100% - 10px);
+    height: auto;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 0;
+    padding: 10px 5px;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #F90;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #FFF;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 600;
+    line-height: 120%;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    #UrunDetaySayfalariUrununAciklamaBaslikMetni {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    #UrunDetaySayfalariUrununAciklamaBaslikMetni {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width:991px) { /* M, S, XS */
+    #UrunDetaySayfalariUrununAciklamaBaslikMetni {
+        font-size: 12px;
+    }
+}
+
+#UrunDetaySayfalariUrununAciklamaIcerikMetni {
+    display: block;
+    width: -webkit-calc(100% - 10px);
+    width: -moz-calc(100% - 10px);
+    width: -o-calc(100% - 10px);
+    width: -ms-calc(100% - 10px);
+    width: calc(100% - 10px);
+    min-width: -webkit-calc(100% - 10px);
+    min-width: -moz-calc(100% - 10px);
+    min-width: -o-calc(100% - 10px);
+    min-width: -ms-calc(100% - 10px);
+    min-width: calc(100% - 10px);
+    max-width: -webkit-calc(100% - 10px);
+    max-width: -moz-calc(100% - 10px);
+    max-width: -o-calc(100% - 10px);
+    max-width: -ms-calc(100% - 10px);
+    max-width: calc(100% - 10px);
+    height: auto;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 0;
+    padding: 10px 5px;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 120%;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    #UrunDetaySayfalariUrununAciklamaIcerikMetni {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    #UrunDetaySayfalariUrununAciklamaIcerikMetni {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width:991px) { /* M, S, XS */
+    #UrunDetaySayfalariUrununAciklamaIcerikMetni {
+        font-size: 12px;
+    }
+}
+
+#UrunDetaySayfalariUrununYorumlariAlani {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: noe;
+    background-color: #FFF;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+#UrunDetaySayfalariUrununYorumlariBaslikMetni {
+    display: block;
+    width: -webkit-calc(100% - 10px);
+    width: -moz-calc(100% - 10px);
+    width: -o-calc(100% - 10px);
+    width: -ms-calc(100% - 10px);
+    width: calc(100% - 10px);
+    min-width: -webkit-calc(100% - 10px);
+    min-width: -moz-calc(100% - 10px);
+    min-width: -o-calc(100% - 10px);
+    min-width: -ms-calc(100% - 10px);
+    min-width: calc(100% - 10px);
+    max-width: -webkit-calc(100% - 10px);
+    max-width: -moz-calc(100% - 10px);
+    max-width: -o-calc(100% - 10px);
+    max-width: -ms-calc(100% - 10px);
+    max-width: calc(100% - 10px);
+    height: auto;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 0;
+    padding: 10px 5px;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #F90;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #FFF;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 600;
+    line-height: 120%;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    #UrunDetaySayfalariUrununYorumlariBaslikMetni {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    #UrunDetaySayfalariUrununYorumlariBaslikMetni {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width:991px) { /* M, S, XS */
+    #UrunDetaySayfalariUrununYorumlariBaslikMetni {
+        font-size: 12px;
+    }
+}
+
+.UrunDetaySayfalariUrununYorumlariIcerikMetni {
+    display: block;
+    width: -webkit-calc(100% - 10px);
+    width: -moz-calc(100% - 10px);
+    width: -o-calc(100% - 10px);
+    width: -ms-calc(100% - 10px);
+    width: calc(100% - 10px);
+    min-width: -webkit-calc(100% - 10px);
+    min-width: -moz-calc(100% - 10px);
+    min-width: -o-calc(100% - 10px);
+    min-width: -ms-calc(100% - 10px);
+    min-width: calc(100% - 10px);
+    max-width: -webkit-calc(100% - 10px);
+    max-width: -moz-calc(100% - 10px);
+    max-width: -o-calc(100% - 10px);
+    max-width: -ms-calc(100% - 10px);
+    max-width: calc(100% - 10px);
+    height: auto;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 0;
+    padding: 5px 5px 10px;
+    overflow: hidden;
+    border: none;
+    border-bottom: 1px dashed #CCC;
+    outline: none;
+    background-color: #FFF;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 120%;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .UrunDetaySayfalariUrununYorumlariIcerikMetni {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .UrunDetaySayfalariUrununYorumlariIcerikMetni {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width:991px) { /* M, S, XS */
+    .UrunDetaySayfalariUrununYorumlariIcerikMetni {
+        font-size: 12px;
+    }
+}
+
+.w3-container {
+    padding: 0.01em 16px
+}
+
+    .w3-container:after, .w3-container:before {
+        content: "";
+        display: table;
+        clear: both
+    }
+
+.w3-modal {
+    z-index: 3;
+    display: none;
+    padding-top: 100px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4)
+}
+
+.w3-modal-content {
+    margin: auto;
+    background-color: #fff;
+    position: relative;
+    padding: 0;
+    outline: 0;
+    width: 600px
+}
+
+@media (max-width:600px) {
+    .w3-modal-content {
+        margin: 0 10px;
+        width: auto !important
+    }
+
+    .w3-modal {
+        padding-top: 30px
+    }
+}
+
+@media (max-width:768px) {
+    .w3-modal-content {
+        width: 500px
+    }
+
+    .w3-modal {
+        padding-top: 50px
+    }
+}
+
+@media (min-width:993px) {
+    .w3-modal-content {
+        width: 900px
+    }
+}
+
+.w3-card-4 {
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)
+}
+
+.w3-teal, .w3-hover-teal:hover {
+    color: #fff !important;
+    background-color: #08C !important
+}
+
+.checked {
+    color: orange;
+}
+#rating_bar > span:before {
+    cursor: pointer;
+}
+
+#rating_bar > span:hover:before, #rating_bar span:hover ~ span:before {
+    color: orange;
+}
+
+.sepetmiktar {
+    background-color: #08C;
+    padding: 4px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+    border-radius: 800px;
+    position: relative;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+#TamSayfaCerceveAlani {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: #EEE;
+    vertical-align: top;
+    text-align: center;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    #TamSayfaCerceveAlani {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width:1199px) { /* L, M, S, XS */
+    #TamSayfaCerceveAlani {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}
+
+#TamSayfaCerceveSinirlamaAlani {
+    position: relative;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    border: 1px solid #DDD;
+    outline: none;
+    background-color: #FFF;
+    vertical-align: middle;
+    text-align: center;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    #TamSayfaCerceveSinirlamaAlani {
+        width: -webkit-calc(1175px - 52px);
+        width: -moz-calc(1175px - 52px);
+        width: -o-calc(1175px - 52px);
+        width: -ms-calc(1175px - 52px);
+        width: calc(1175px - 52px);
+        min-width: -webkit-calc(1175px - 52px);
+        min-width: -moz-calc(1175px - 52px);
+        min-width: -o-calc(1175px - 52px);
+        min-width: -ms-calc(1175px - 52px);
+        min-width: calc(1175px - 52px);
+        max-width: -webkit-calc(1175px - 52px);
+        max-width: -moz-calc(1175px - 52px);
+        max-width: -o-calc(1175px - 52px);
+        max-width: -ms-calc(1175px - 52px);
+        max-width: calc(1175px - 52px);
+        padding: 20px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    #TamSayfaCerceveSinirlamaAlani {
+        width: -webkit-calc(100% - 48px);
+        width: -moz-calc(100% - 48px);
+        width: -o-calc(100% - 48px);
+        width: -ms-calc(100% - 48px);
+        width: calc(100% - 48px);
+        min-width: -webkit-calc(100% - 48px);
+        min-width: -moz-calc(100% - 48px);
+        min-width: -o-calc(100% - 48px);
+        min-width: -ms-calc(100% - 48px);
+        min-width: calc(100% - 48px);
+        max-width: -webkit-calc(100% - 48px);
+        max-width: -moz-calc(100% - 48px);
+        max-width: -o-calc(100% - 48px);
+        max-width: -ms-calc(100% - 48px);
+        max-width: calc(100% - 48px);
+        padding: 18px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    #TamSayfaCerceveSinirlamaAlani {
+        width: -webkit-calc(100% - 44px);
+        width: -moz-calc(100% - 44px);
+        width: -o-calc(100% - 44px);
+        width: -ms-calc(100% - 44px);
+        width: calc(100% - 44px);
+        min-width: -webkit-calc(100% - 44px);
+        min-width: -moz-calc(100% - 44px);
+        min-width: -o-calc(100% - 44px);
+        min-width: -ms-calc(100% - 44px);
+        min-width: calc(100% - 44px);
+        max-width: -webkit-calc(100% - 44px);
+        max-width: -moz-calc(100% - 44px);
+        max-width: -o-calc(100% - 44px);
+        max-width: -ms-calc(100% - 44px);
+        max-width: calc(100% - 44px);
+        padding: 16px;
+    }
+}
+
+@media only screen and (min-width:576px) and (max-width:767px) { /* S */
+    #TamSayfaCerceveSinirlamaAlani {
+        width: -webkit-calc(100% - 40px);
+        width: -moz-calc(100% - 40px);
+        width: -o-calc(100% - 40px);
+        width: -ms-calc(100% - 40px);
+        width: calc(100% - 40px);
+        min-width: -webkit-calc(100% - 40px);
+        min-width: -moz-calc(100% - 40px);
+        min-width: -o-calc(100% - 40px);
+        min-width: -ms-calc(100% - 40px);
+        min-width: calc(100% - 40px);
+        max-width: -webkit-calc(100% - 40px);
+        max-width: -moz-calc(100% - 40px);
+        max-width: -o-calc(100% - 40px);
+        max-width: -ms-calc(100% - 40px);
+        max-width: calc(100% - 40px);
+        padding: 14px;
+    }
+}
+
+@media only screen and (max-width:574px) { /* XS */
+    #TamSayfaCerceveSinirlamaAlani {
+        width: -webkit-calc(100% - 36px);
+        width: -moz-calc(100% - 36px);
+        width: -o-calc(100% - 36px);
+        width: -ms-calc(100% - 36px);
+        width: calc(100% - 36px);
+        min-width: -webkit-calc(100% - 36px);
+        min-width: -moz-calc(100% - 36px);
+        min-width: -o-calc(100% - 36px);
+        min-width: -ms-calc(100% - 36px);
+        min-width: calc(100% - 36px);
+        max-width: -webkit-calc(100% - 36px);
+        max-width: -moz-calc(100% - 36px);
+        max-width: -o-calc(100% - 36px);
+        max-width: -ms-calc(100% - 36px);
+        max-width: calc(100% - 36px);
+        padding: 12px;
+    }
+}
+
+#TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiSolAlan {
+    display: inline-block;
+    float: left;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: left;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    #TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiSolAlan {
+        width: -webkit-calc(100% - 260px);
+        width: -moz-calc(100% - 260px);
+        width: -o-calc(100% - 260px);
+        width: -ms-calc(100% - 260px);
+        width: calc(100% - 260px);
+        min-width: -webkit-calc(100% - 260px);
+        min-width: -moz-calc(100% - 260px);
+        min-width: -o-calc(100% - 260px);
+        min-width: -ms-calc(100% - 260px);
+        min-width: calc(100% - 260px);
+        max-width: -webkit-calc(100% - 260px);
+        max-width: -moz-calc(100% - 260px);
+        max-width: -o-calc(100% - 260px);
+        max-width: -ms-calc(100% - 260px);
+        max-width: calc(100% - 260px);
+        padding-right: 10px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    #TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiSolAlan {
+        width: -webkit-calc(100% - 234px);
+        width: -moz-calc(100% - 234px);
+        width: -o-calc(100% - 234px);
+        width: -ms-calc(100% - 234px);
+        width: calc(100% - 234px);
+        min-width: -webkit-calc(100% - 234px);
+        min-width: -moz-calc(100% - 234px);
+        min-width: -o-calc(100% - 234px);
+        min-width: -ms-calc(100% - 234px);
+        min-width: calc(100% - 234px);
+        max-width: -webkit-calc(100% - 234px);
+        max-width: -moz-calc(100% - 234px);
+        max-width: -o-calc(100% - 234px);
+        max-width: -ms-calc(100% - 234px);
+        max-width: calc(100% - 234px);
+        padding-right: 9px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    #TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiSolAlan {
+        width: -webkit-calc(100% - 208px);
+        width: -moz-calc(100% - 208px);
+        width: -o-calc(100% - 208px);
+        width: -ms-calc(100% - 208px);
+        width: calc(100% - 208px);
+        min-width: -webkit-calc(100% - 208px);
+        min-width: -moz-calc(100% - 208px);
+        min-width: -o-calc(100% - 208px);
+        min-width: -ms-calc(100% - 208px);
+        min-width: calc(100% - 208px);
+        max-width: -webkit-calc(100% - 208px);
+        max-width: -moz-calc(100% - 208px);
+        max-width: -o-calc(100% - 208px);
+        max-width: -ms-calc(100% - 208px);
+        max-width: calc(100% - 208px);
+        padding-right: 8px;
+    }
+}
+
+@media only screen and (max-width:767px) { /* S, XS */
+    #TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiSolAlan {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
+
+#TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiSagAlan {
+    display: inline-block;
+    float: right;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: left;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    #TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiSagAlan {
+        width: -webkit-calc(250px - 10px);
+        width: -moz-calc(250px - 10px);
+        width: -o-calc(250px - 10px);
+        width: -ms-calc(250px - 10px);
+        width: calc(250px - 10px);
+        min-width: -webkit-calc(250px - 10px);
+        min-width: -moz-calc(250px - 10px);
+        min-width: -o-calc(250px - 10px);
+        min-width: -ms-calc(250px - 10px);
+        min-width: calc(250px - 10px);
+        max-width: -webkit-calc(250px - 10px);
+        max-width: -moz-calc(250px - 10px);
+        max-width: -o-calc(250px - 10px);
+        max-width: -ms-calc(250px - 10px);
+        max-width: calc(250px - 10px);
+        padding-left: 10px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    #TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiSagAlan {
+        width: -webkit-calc(225px - 9px);
+        width: -moz-calc(225px - 9px);
+        width: -o-calc(225px - 9px);
+        width: -ms-calc(225px - 9px);
+        width: calc(225px - 9px);
+        min-width: -webkit-calc(225px - 9px);
+        min-width: -moz-calc(225px - 9px);
+        min-width: -o-calc(225px - 9px);
+        min-width: -ms-calc(225px - 9px);
+        min-width: calc(225px - 9px);
+        max-width: -webkit-calc(225px - 9px);
+        max-width: -moz-calc(225px - 9px);
+        max-width: -o-calc(225px - 9px);
+        max-width: -ms-calc(225px - 9px);
+        max-width: calc(225px - 9px);
+        padding-left: 9px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    #TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiSagAlan {
+        width: -webkit-calc(200px - 8px);
+        width: -moz-calc(200px - 8px);
+        width: -o-calc(200px - 8px);
+        width: -ms-calc(200px - 8px);
+        width: calc(200px - 8px);
+        min-width: -webkit-calc(200px - 8px);
+        min-width: -moz-calc(200px - 8px);
+        min-width: -o-calc(200px - 8px);
+        min-width: -ms-calc(200px - 8px);
+        min-width: calc(200px - 8px);
+        max-width: -webkit-calc(200px - 8px);
+        max-width: -moz-calc(200px - 8px);
+        max-width: -o-calc(200px - 8px);
+        max-width: -ms-calc(200px - 8px);
+        max-width: calc(200px - 8px);
+        padding-left: 8px;
+    }
+}
+
+@media only screen and (min-width:576px) and (max-width:767px) { /* S */
+    #TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiSagAlan {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        padding-top: 20px;
+    }
+}
+
+@media only screen and (max-width:574px) { /* XS */
+    #TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiSagAlan {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        padding-top: 10px;
+    }
+}
+
+.TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliBaslikAlani {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    border-bottom: 1px solid #DDD;
+    outline: none;
+    background-color: #FFF;
+    text-align: left;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliBaslikAlani {
+        padding-bottom: 20px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliBaslikAlani {
+        padding-bottom: 18px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliBaslikAlani {
+        padding-bottom: 16px;
+    }
+}
+
+@media only screen and (min-width:576px) and (max-width:767px) { /* S */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliBaslikAlani {
+        padding-bottom: 14px;
+    }
+}
+
+@media only screen and (max-width:574px) { /* XS */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliBaslikAlani {
+        padding-bottom: 12px;
+    }
+}
+
+.TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliBaslikAlaniUstBaslikMetni {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #F90;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 600;
+    line-height: 120%;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliBaslikAlaniUstBaslikMetni {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliBaslikAlaniUstBaslikMetni {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width:991px) { /* M, S, XS */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliBaslikAlaniUstBaslikMetni {
+        font-size: 14px;
+    }
+}
+
+.TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliBaslikAlaniAltBaslikMetni {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 120%;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliBaslikAlaniAltBaslikMetni {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliBaslikAlaniAltBaslikMetni {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width:991px) { /* M, S, XS */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliBaslikAlaniAltBaslikMetni {
+        font-size: 12px;
+    }
+}
+
+.TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliSagBaslikAlani {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    border-bottom: 1px solid #DDD;
+    outline: none;
+    background-color: #FFF;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliSagBaslikAlani {
+        padding-bottom: 20px;
+        text-align: right;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliSagBaslikAlani {
+        padding-bottom: 18px;
+        text-align: right;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliSagBaslikAlani {
+        padding-bottom: 16px;
+        text-align: right;
+    }
+}
+
+@media only screen and (min-width:576px) and (max-width:767px) { /* S */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliSagBaslikAlani {
+        padding-bottom: 14px;
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width:574px) { /* XS */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliSagBaslikAlani {
+        padding-bottom: 12px;
+        text-align: left;
+    }
+}
+
+.TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliSagBaslikAlaniUstBaslikMetni {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #F90;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 600;
+    line-height: 120%;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliSagBaslikAlaniUstBaslikMetni {
+        font-size: 18px;
+        text-align: right;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliSagBaslikAlaniUstBaslikMetni {
+        font-size: 16px;
+        text-align: right;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliSagBaslikAlaniUstBaslikMetni {
+        font-size: 14px;
+        text-align: right;
+    }
+}
+
+@media only screen and (max-width:767px) { /* S, XS */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliSagBaslikAlaniUstBaslikMetni {
+        font-size: 14px;
+        text-align: left;
+    }
+}
+
+.TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliSagBaslikAlaniAltBaslikMetni {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 120%;
+    text-align: right;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliSagBaslikAlaniAltBaslikMetni {
+        font-size: 14px;
+        text-align: right;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliSagBaslikAlaniAltBaslikMetni {
+        font-size: 13px;
+        text-align: right;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliSagBaslikAlaniAltBaslikMetni {
+        font-size: 12px;
+        text-align: right;
+    }
+}
+
+@media only screen and (max-width:767px) { /* S, XS */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiAltiCizgiliSagBaslikAlaniAltBaslikMetni {
+        font-size: 12px;
+        text-align: left;
+    }
+}
+
+.TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunlerAlani {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    border-bottom: 1px dashed #DDD;
+    outline: none;
+    background-color: #FFF;
+    text-align: left;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunlerAlani {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunlerAlani {
+        padding-top: 9px;
+        padding-bottom: 9px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunlerAlani {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+}
+
+@media only screen and (min-width:576px) and (max-width:767px) { /* S */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunlerAlani {
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+}
+
+@media only screen and (max-width:574px) { /* XS */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunlerAlani {
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+}
+
+.TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunResmiAlani {
+    display: inline-block;
+    float: left;
+    width: 60px;
+    min-width: 60px;
+    max-width: 60px;
+    height: 80px;
+    min-height: 80px;
+    max-height: 80px;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: left;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunResmiAlani {
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunResmiAlani {
+        margin-right: 9px;
+    }
+}
+
+@media only screen and (max-width:991px) { /* M, S, XS */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunResmiAlani {
+        margin-right: 8px;
+    }
+}
+
+.TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunResmiAlani img {
+    display: block;
+    float: left;
+    width: 60px;
+    min-width: 60px;
+    max-width: 60px;
+    height: 80px;
+    min-height: 80px;
+    max-height: 80px;
+    margin: 0 auto;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+.TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunSilResmiAlani {
+    display: inline-block;
+    float: left;
+    width: 20px;
+    min-width: 20px;
+    max-width: 20px;
+    height: 80px;
+    min-height: 80px;
+    max-height: 80px;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: left;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunSilResmiAlani {
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunSilResmiAlani {
+        margin-right: 9px;
+    }
+}
+
+@media only screen and (max-width:991px) { /* M, S, XS */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunSilResmiAlani {
+        margin-right: 8px;
+    }
+}
+
+.TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunSilResmiAlani img {
+    display: block;
+    float: left;
+    width: 20px;
+    min-width: 20px;
+    max-width: 20px;
+    height: 20px;
+    min-height: 20px;
+    max-height: 20px;
+    margin: 0 auto;
+    margin-top: 31px;
+    padding: 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunAdiAlani {
+    display: inline-block;
+    float: left;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    vertical-align: top;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-align: left;
+    text-decoration: none;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunAdiAlani {
+        width: -webkit-calc(100% - 295px);
+        width: -moz-calc(100% - 295px);
+        width: -o-calc(100% - 295px);
+        width: -ms-calc(100% - 295px);
+        width: calc(100% - 295px);
+        min-width: -webkit-calc(100% - 295px);
+        min-width: -moz-calc(100% - 295px);
+        min-width: -o-calc(100% - 295px);
+        min-width: -ms-calc(100% - 295px);
+        min-width: calc(100% - 295px);
+        max-width: -webkit-calc(100% - 295px);
+        max-width: -moz-calc(100% - 295px);
+        max-width: -o-calc(100% - 295px);
+        max-width: -ms-calc(100% - 295px);
+        max-width: calc(100% - 295px);
+        margin-right: 10px;
+        height: 80px;
+        min-height: 80px;
+        max-height: 80px;
+        line-height: 80px;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunAdiAlani {
+        width: -webkit-calc(100% - 281px);
+        width: -moz-calc(100% - 281px);
+        width: -o-calc(100% - 281px);
+        width: -ms-calc(100% - 281px);
+        width: calc(100% - 281px);
+        min-width: -webkit-calc(100% - 281px);
+        min-width: -moz-calc(100% - 281px);
+        min-width: -o-calc(100% - 281px);
+        min-width: -ms-calc(100% - 281px);
+        min-width: calc(100% - 281px);
+        max-width: -webkit-calc(100% - 281px);
+        max-width: -moz-calc(100% - 281px);
+        max-width: -o-calc(100% - 281px);
+        max-width: -ms-calc(100% - 281px);
+        max-width: calc(100% - 281px);
+        margin-right: 9px;
+        height: 80px;
+        min-height: 80px;
+        max-height: 80px;
+        line-height: 80px;
+        font-size: 13px;
+        padding-top: 1px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunAdiAlani {
+        width: -webkit-calc(100% - 267px);
+        width: -moz-calc(100% - 267px);
+        width: -o-calc(100% - 267px);
+        width: -ms-calc(100% - 267px);
+        width: calc(100% - 267px);
+        min-width: -webkit-calc(100% - 267px);
+        min-width: -moz-calc(100% - 267px);
+        min-width: -o-calc(100% - 267px);
+        min-width: -ms-calc(100% - 267px);
+        min-width: calc(100% - 267px);
+        max-width: -webkit-calc(100% - 267px);
+        max-width: -moz-calc(100% - 267px);
+        max-width: -o-calc(100% - 267px);
+        max-width: -ms-calc(100% - 267px);
+        max-width: calc(100% - 267px);
+        margin-right: 8px;
+        height: 80px;
+        min-height: 80px;
+        max-height: 80px;
+        line-height: 80px;
+        font-size: 12px;
+        padding-top: 1px;
+    }
+}
+
+@media only screen and (max-width:767px) { /* S, XS */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunAdiAlani {
+        width: -webkit-calc(100% - 96px);
+        width: -moz-calc(100% - 96px);
+        width: -o-calc(100% - 96px);
+        width: -ms-calc(100% - 96px);
+        width: calc(100% - 96px);
+        min-width: -webkit-calc(100% - 96px);
+        min-width: -moz-calc(100% - 96px);
+        min-width: -o-calc(100% - 96px);
+        min-width: -ms-calc(100% - 96px);
+        min-width: calc(100% - 96px);
+        max-width: -webkit-calc(100% - 96px);
+        max-width: -moz-calc(100% - 96px);
+        max-width: -o-calc(100% - 96px);
+        max-width: -ms-calc(100% - 96px);
+        max-width: calc(100% - 96px);
+        height: 40px;
+        min-height: 40px;
+        max-height: 40px;
+        line-height: 40px;
+        font-size: 12px;
+    }
+}
+
+.TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunAdediAlani {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunAdediAlani {
+        float: left;
+        width: 75px;
+        min-width: 75px;
+        max-width: 75px;
+        height: 80px;
+        min-height: 80px;
+        max-height: 80px;
+        line-height: 80px;
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunAdediAlani {
+        float: left;
+        width: 70px;
+        min-width: 70px;
+        max-width: 70px;
+        height: 80px;
+        min-height: 80px;
+        max-height: 80px;
+        line-height: 80px;
+        margin-right: 9px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunAdediAlani {
+        float: left;
+        width: 65px;
+        min-width: 65px;
+        max-width: 65px;
+        height: 80px;
+        min-height: 80px;
+        max-height: 80px;
+        line-height: 80px;
+        margin-right: 8px;
+    }
+}
+
+@media only screen and (max-width:767px) { /* S, XS */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunAdediAlani {
+        float: right;
+        width: 65px;
+        min-width: 65px;
+        max-width: 65px;
+        height: 40px;
+        min-height: 40px;
+        max-height: 40px;
+        line-height: 40px;
+        margin-right: 8px;
+    }
+}
+
+.TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunAdediVeIslemleriAlani {
+    display: inline-block;
+    height: 20px;
+    min-height: 20px;
+    max-height: 20px;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunAdediVeIslemleriAlani {
+        width: 75px;
+        min-width: 75px;
+        max-width: 75px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunAdediVeIslemleriAlani {
+        width: 70px;
+        min-width: 70px;
+        max-width: 70px;
+    }
+}
+
+@media only screen and (max-width:991px) { /* M, S, XS */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunAdediVeIslemleriAlani {
+        width: 65px;
+        min-width: 65px;
+        max-width: 65px;
+    }
+}
+
+.TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunAdediEksiltmeAlani {
+    display: inline-block;
+    float: left;
+    width: 20px;
+    min-width: 20px;
+    max-width: 20px;
+    height: 20px;
+    min-height: 20px;
+    max-height: 20px;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    line-height: 20px;
+    text-align: left;
+    vertical-align: top;
+}
+
+    .TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunAdediEksiltmeAlani img {
+        display: block;
+        float: left;
+        width: 20px;
+        min-width: 20px;
+        max-width: 20px;
+        height: 20px;
+        min-height: 20px;
+        max-height: 20px;
+        margin: 0 auto;
+        padding: 0;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+.TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunAdediRakamAlani {
+    display: inline-block;
+    float: left;
+    height: 20px;
+    min-height: 20px;
+    max-height: 20px;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    line-height: 20px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunAdediRakamAlani {
+        width: 35px;
+        min-width: 35px;
+        max-width: 35px;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunAdediRakamAlani {
+        width: 30px;
+        min-width: 30px;
+        max-width: 30px;
+        padding-top: 1px;
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width:991px) { /* M, S, XS */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunAdediRakamAlani {
+        width: 25px;
+        min-width: 25px;
+        max-width: 25px;
+        padding-top: 1px;
+        font-size: 12px;
+    }
+}
+
+.TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunAdediArttirmaAlani {
+    display: inline-block;
+    float: left;
+    width: 20px;
+    min-width: 20px;
+    max-width: 20px;
+    height: 20px;
+    min-height: 20px;
+    max-height: 2px;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    line-height: 20px;
+    text-align: left;
+    vertical-align: top;
+}
+
+    .TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiUrunAdediArttirmaAlani img {
+        display: block;
+        float: left;
+        width: 20px;
+        min-width: 20px;
+        max-width: 20px;
+        height: 20px;
+        min-height: 20px;
+        max-height: 20px;
+        margin: 0 auto;
+        padding: 0;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+.TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiFiyatAlani {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiFiyatAlani {
+        float: left;
+        width: 100px;
+        min-width: 100px;
+        max-width: 100px;
+        height: 80px;
+        min-height: 80px;
+        max-height: 80px;
+        line-height: 80px;
+        font-size: 14px;
+        text-align: right;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiFiyatAlani {
+        float: left;
+        width: 95px;
+        min-width: 95px;
+        max-width: 95px;
+        line-height: 80px;
+        height: 80px;
+        min-height: 80px;
+        max-height: 80px;
+        font-size: 13px;
+        padding-top: 1px;
+        text-align: right;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiFiyatAlani {
+        float: left;
+        width: 90px;
+        min-width: 90px;
+        max-width: 90px;
+        line-height: 80px;
+        height: 80px;
+        min-height: 80px;
+        max-height: 80px;
+        font-size: 12px;
+        padding-top: 1px;
+        text-align: right;
+    }
+}
+
+@media only screen and (max-width:767px) { /* S, XS */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiSayfasiFiyatAlani {
+        float: right;
+        width: 65px;
+        min-width: 65px;
+        max-width: 65px;
+        height: 38px;
+        min-height: 38px;
+        max-height: 38px;
+        line-height: 38px;
+        margin-top: 2px;
+        font-size: 12px;
+        text-align: left;
+    }
+}
+
+.TamSayfaCerceveAlaniIciAlisverisSepetiOdenecekTutarBaslikAlani {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 120%;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiOdenecekTutarBaslikAlani {
+        font-size: 14px;
+        padding-top: 10px;
+        text-align: right;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiOdenecekTutarBaslikAlani {
+        font-size: 13px;
+        padding-top: 9px;
+        text-align: right;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiOdenecekTutarBaslikAlani {
+        font-size: 12px;
+        padding-top: 8px;
+        text-align: right;
+    }
+}
+
+@media only screen and (max-width:767px) { /* S, XS */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiOdenecekTutarBaslikAlani {
+        font-size: 12px;
+        padding-top: 8px;
+        text-align: left;
+    }
+}
+
+.TamSayfaCerceveAlaniIciAlisverisSepetiOdenecekTutarRakamAlani {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 800;
+    line-height: 120%;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiOdenecekTutarRakamAlani {
+        font-size: 26px;
+        padding-bttom: 10px;
+        text-align: right;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiOdenecekTutarRakamAlani {
+        font-size: 24px;
+        padding-bttom: 9px;
+        text-align: right;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiOdenecekTutarRakamAlani {
+        font-size: 22px;
+        padding-bttom: 8px;
+        text-align: right;
+    }
+}
+
+@media only screen and (max-width:767px) { /* S, XS */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiOdenecekTutarRakamAlani {
+        font-size: 22px;
+        padding-bttom: 8px;
+        text-align: left;
+    }
+}
+
+.TamSayfaCerceveAlaniIciAlisverisSepetiSiparisOzetiIciButonAlani {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: 35px;
+    min-height: 35px;
+    max-height: 35px;
+    margin: 0 auto;
+    margin-top: 5px;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #F90;
+    text-align: center;
+    vertical-align: top;
+    cursor: pointer;
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+}
+
+    .TamSayfaCerceveAlaniIciAlisverisSepetiSiparisOzetiIciButonAlani:hover {
+        display: block;
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        height: 35px;
+        min-height: 35px;
+        max-height: 35px;
+        margin: 0 auto;
+        margin-top: 5px;
+        padding: 0;
+        overflow: hidden;
+        border: none;
+        outline: none;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -o-border-radius: 3px;
+        -ms-border-radius: 3px;
+        border-radius: 3px;
+        background-color: #D77000;
+        text-align: center;
+        vertical-align: top;
+        cursor: pointer;
+        -webkit-transition: all 500ms ease-in-out;
+        -moz-transition: all 500ms ease-in-out;
+        -o-transition: all 500ms ease-in-out;
+        -ms-transition: all 500ms ease-in-out;
+        transition: all 500ms ease-in-out;
+    }
+
+.TamSayfaCerceveAlaniIciAlisverisSepetiSiparisOzetiIciButonuIconu {
+    display: inline-block;
+    width: 21px;
+    min-width: 21px;
+    max-width: 21px;
+    height: 20px;
+    min-height: 20px;
+    max-height: 20px;
+    margin: 0 auto;
+    margin-right: 5px;
+    padding: 0;
+    padding-top: 7px;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+    .TamSayfaCerceveAlaniIciAlisverisSepetiSiparisOzetiIciButonuIconu img {
+        display: block;
+        width: 21px;
+        min-width: 21px;
+        max-width: 21px;
+        height: 20px;
+        min-height: 20px;
+        max-height: 20px;
+        margin: 0 auto;
+        padding: 0;
+        border: none;
+        outline: none;
+    }
+
+.TamSayfaCerceveAlaniIciAlisverisSepetiSiparisOzetiIciButonuMetni {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #FFF;
+    line-height: 120%;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-align: left;
+    text-decoration: none;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiSiparisOzetiIciButonuMetni {
+        font-size: 16px;
+        padding-top: 8px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiSiparisOzetiIciButonuMetni {
+        font-size: 15px;
+        padding-top: 9px;
+    }
+}
+
+@media only screen and (max-width:991px) { /* M, S, XS */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiSiparisOzetiIciButonuMetni {
+        font-size: 14px;
+        padding-top: 10px;
+    }
+}
+
+.TamSayfaCerceveAlaniIciAlisverisSepetiUrunlerToplamiKDVDahilBaslikAlani {
+    display: block;
+    width: -webkit-calc(100% - 5px);
+    width: -moz-calc(100% - 5px);
+    width: -o-calc(100% - 5px);
+    width: -ms-calc(100% - 5px);
+    width: calc(100% - 5px);
+    min-width: -webkit-calc(100% - 5px);
+    min-width: -moz-calc(100% - 5px);
+    min-width: -o-calc(100% - 5px);
+    min-width: -ms-calc(100% - 5px);
+    min-width: calc(100% - 5px);
+    max-width: -webkit-calc(100% - 5px);
+    max-width: -moz-calc(100% - 5px);
+    max-width: -o-calc(100% - 5px);
+    max-width: -ms-calc(100% - 5px);
+    max-width: calc(100% - 5px);
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #F1F1F1;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    line-height: 120%;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiUrunlerToplamiKDVDahilBaslikAlani {
+        font-size: 14px;
+        text-align: right;
+        margin-top: 10px;
+        padding-top: 10px;
+        padding-right: 5px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiUrunlerToplamiKDVDahilBaslikAlani {
+        font-size: 13px;
+        text-align: right;
+        margin-top: 9px;
+        padding-top: 9px;
+        padding-right: 5px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiUrunlerToplamiKDVDahilBaslikAlani {
+        font-size: 12px;
+        text-align: right;
+        margin-top: 8px;
+        padding-top: 8px;
+        padding-right: 5px;
+    }
+}
+
+@media only screen and (min-width:576px) and (max-width:767px) { /* S */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiUrunlerToplamiKDVDahilBaslikAlani {
+        font-size: 12px;
+        text-align: left;
+        margin-top: 8px;
+        padding-top: 8px;
+        padding-left: 5px;
+    }
+}
+
+@media only screen and (max-width:574px) { /* XS */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiUrunlerToplamiKDVDahilBaslikAlani {
+        font-size: 12px;
+        text-align: left;
+        margin-top: 8px;
+        padding-top: 8px;
+        padding-left: 5px;
+    }
+}
+
+.TamSayfaCerceveAlaniIciAlisverisSepetiUrunlerToplamiKDVDahilRakamAlani {
+    display: block;
+    width: -webkit-calc(100% - 5px);
+    width: -moz-calc(100% - 5px);
+    width: -o-calc(100% - 5px);
+    width: -ms-calc(100% - 5px);
+    width: calc(100% - 5px);
+    min-width: -webkit-calc(100% - 5px);
+    min-width: -moz-calc(100% - 5px);
+    min-width: -o-calc(100% - 5px);
+    min-width: -ms-calc(100% - 5px);
+    min-width: calc(100% - 5px);
+    max-width: -webkit-calc(100% - 5px);
+    max-width: -moz-calc(100% - 5px);
+    max-width: -o-calc(100% - 5px);
+    max-width: -ms-calc(100% - 5px);
+    max-width: calc(100% - 5px);
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #F1F1F1;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    line-height: 120%;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 800;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiUrunlerToplamiKDVDahilRakamAlani {
+        font-size: 14px;
+        text-align: right;
+        padding-bottom: 10px;
+        padding-right: 5px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiUrunlerToplamiKDVDahilRakamAlani {
+        font-size: 13px;
+        text-align: right;
+        padding-bottom: 9px;
+        padding-right: 5px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiUrunlerToplamiKDVDahilRakamAlani {
+        font-size: 12px;
+        text-align: right;
+        padding-bottom: 8px;
+        padding-right: 5px;
+    }
+}
+
+@media only screen and (min-width:576px) and (max-width:767px) { /* S */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiUrunlerToplamiKDVDahilRakamAlani {
+        font-size: 12px;
+        text-align: left;
+        padding-bottom: 8px;
+        padding-left: 5px;
+    }
+}
+
+@media only screen and (max-width:574px) { /* XS */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiUrunlerToplamiKDVDahilRakamAlani {
+        font-size: 12px;
+        text-align: left;
+        padding-bottom: 8px;
+        padding-left: 5px;
+    }
+}
+
+.TamSayfaCerceveAlaniIciAlisverisSepetiIndirimlerToplamiKDVDahilBaslikAlani {
+    display: block;
+    width: -webkit-calc(100% - 5px);
+    width: -moz-calc(100% - 5px);
+    width: -o-calc(100% - 5px);
+    width: -ms-calc(100% - 5px);
+    width: calc(100% - 5px);
+    min-width: -webkit-calc(100% - 5px);
+    min-width: -moz-calc(100% - 5px);
+    min-width: -o-calc(100% - 5px);
+    min-width: -ms-calc(100% - 5px);
+    min-width: calc(100% - 5px);
+    max-width: -webkit-calc(100% - 5px);
+    max-width: -moz-calc(100% - 5px);
+    max-width: -o-calc(100% - 5px);
+    max-width: -ms-calc(100% - 5px);
+    max-width: calc(100% - 5px);
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #F1F1F1;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    line-height: 120%;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiIndirimlerToplamiKDVDahilBaslikAlani {
+        font-size: 14px;
+        text-align: right;
+        margin-top: 5px;
+        padding-top: 10px;
+        padding-right: 5px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiIndirimlerToplamiKDVDahilBaslikAlani {
+        font-size: 13px;
+        text-align: right;
+        margin-top: 4px;
+        padding-top: 9px;
+        padding-right: 5px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiIndirimlerToplamiKDVDahilBaslikAlani {
+        font-size: 12px;
+        text-align: right;
+        margin-top: 3px;
+        padding-top: 8px;
+        padding-right: 5px;
+    }
+}
+
+@media only screen and (min-width:576px) and (max-width:767px) { /* S */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiIndirimlerToplamiKDVDahilBaslikAlani {
+        font-size: 12px;
+        text-align: left;
+        margin-top: 3px;
+        padding-top: 8px;
+        padding-left: 5px;
+    }
+}
+
+@media only screen and (max-width:574px) { /* XS */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiIndirimlerToplamiKDVDahilBaslikAlani {
+        font-size: 12px;
+        text-align: left;
+        margin-top: 3px;
+        padding-top: 8px;
+        padding-left: 5px;
+    }
+}
+
+.TamSayfaCerceveAlaniIciAlisverisSepetiIndirimlerToplamiKDVDahilRakamAlani {
+    display: block;
+    width: -webkit-calc(100% - 5px);
+    width: -moz-calc(100% - 5px);
+    width: -o-calc(100% - 5px);
+    width: -ms-calc(100% - 5px);
+    width: calc(100% - 5px);
+    min-width: -webkit-calc(100% - 5px);
+    min-width: -moz-calc(100% - 5px);
+    min-width: -o-calc(100% - 5px);
+    min-width: -ms-calc(100% - 5px);
+    min-width: calc(100% - 5px);
+    max-width: -webkit-calc(100% - 5px);
+    max-width: -moz-calc(100% - 5px);
+    max-width: -o-calc(100% - 5px);
+    max-width: -ms-calc(100% - 5px);
+    max-width: calc(100% - 5px);
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #F1F1F1;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    line-height: 120%;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 800;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiIndirimlerToplamiKDVDahilRakamAlani {
+        font-size: 14px;
+        text-align: right;
+        padding-bottom: 10px;
+        padding-right: 5px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiIndirimlerToplamiKDVDahilRakamAlani {
+        font-size: 13px;
+        text-align: right;
+        padding-bottom: 9px;
+        padding-right: 5px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiIndirimlerToplamiKDVDahilRakamAlani {
+        font-size: 12px;
+        text-align: right;
+        padding-bottom: 8px;
+        padding-right: 5px;
+    }
+}
+
+@media only screen and (min-width:576px) and (max-width:767px) { /* S */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiIndirimlerToplamiKDVDahilRakamAlani {
+        font-size: 12px;
+        text-align: left;
+        padding-bottom: 8px;
+        padding-left: 5px;
+    }
+}
+
+@media only screen and (max-width:574px) { /* XS */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiIndirimlerToplamiKDVDahilRakamAlani {
+        font-size: 12px;
+        text-align: left;
+        padding-bottom: 8px;
+        padding-left: 5px;
+    }
+}
+
+.TamSayfaCerceveAlaniIciAlisverisSepetiKargoUcretleriToplamiKDVDahilBaslikAlani {
+    display: block;
+    width: -webkit-calc(100% - 5px);
+    width: -moz-calc(100% - 5px);
+    width: -o-calc(100% - 5px);
+    width: -ms-calc(100% - 5px);
+    width: calc(100% - 5px);
+    min-width: -webkit-calc(100% - 5px);
+    min-width: -moz-calc(100% - 5px);
+    min-width: -o-calc(100% - 5px);
+    min-width: -ms-calc(100% - 5px);
+    min-width: calc(100% - 5px);
+    max-width: -webkit-calc(100% - 5px);
+    max-width: -moz-calc(100% - 5px);
+    max-width: -o-calc(100% - 5px);
+    max-width: -ms-calc(100% - 5px);
+    max-width: calc(100% - 5px);
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #F1F1F1;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    line-height: 120%;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiKargoUcretleriToplamiKDVDahilBaslikAlani {
+        font-size: 14px;
+        text-align: right;
+        margin-top: 5px;
+        padding-top: 10px;
+        padding-right: 5px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiKargoUcretleriToplamiKDVDahilBaslikAlani {
+        font-size: 13px;
+        text-align: right;
+        margin-top: 4px;
+        padding-top: 9px;
+        padding-right: 5px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiKargoUcretleriToplamiKDVDahilBaslikAlani {
+        font-size: 12px;
+        text-align: right;
+        margin-top: 3px;
+        padding-top: 8px;
+        padding-right: 5px;
+    }
+}
+
+@media only screen and (min-width:576px) and (max-width:767px) { /* S */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiKargoUcretleriToplamiKDVDahilBaslikAlani {
+        font-size: 12px;
+        text-align: left;
+        margin-top: 3px;
+        padding-top: 8px;
+        padding-left: 5px;
+    }
+}
+
+@media only screen and (max-width:574px) { /* XS */
+    .TamSayfaCerceveAlaniIciAlisverisSepetiKargoUcretleriToplamiKDVDahilBaslikAlani {
+        font-size: 12px;
+        text-align: left;
+        margin-top: 3px;
+        padding-top: 8px;
+        padding-left: 5px;
+    }
+}
+
+.TamSayfaCerceveAlaniIciAlisverisSepetiKargoUcretleriToplamiKDVDahilRakamAlani {
+    display: block;
+    width: -webkit-calc(100% - 5px);
+    width: -moz-calc(100% - 5px);
+    width: -o-calc(100% - 5px);
+    width: -ms-calc(100% - 5px);
+    width: calc(100% - 5px);
+    min-width: -webkit-calc(100% - 5px);
+    min-width: -moz-calc(100% - 5px);
+    min-width: -o-calc(100% - 5px);
+    min-width: -ms-calc(100% - 5px);
+    min-width: calc(100% - 5px);
+    max-width: -webkit-calc(100% - 5px);
+    max-width: -moz-calc(100% - 5px);
+    max-width: -o-calc(100% - 5px);
+    max-width: -ms-calc(100% - 5px);
+    max-width: calc(100% - 5px);
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #F1F1F1;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    line-height: 120%;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 800;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+#TamSayfaCerceveAlaniIciYuzdeYuzlukAlan {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: center;
+    vertical-align: top;
+}
+
+.TamSayfaCerceveAlaniIciAltiCizgiliBaslikAlani {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    border-bottom: 1px solid #DDD;
+    outline: none;
+    background-color: #FFF;
+    text-align: left;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaCerceveAlaniIciAltiCizgiliBaslikAlani {
+        padding-bottom: 20px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaCerceveAlaniIciAltiCizgiliBaslikAlani {
+        padding-bottom: 18px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    .TamSayfaCerceveAlaniIciAltiCizgiliBaslikAlani {
+        padding-bottom: 16px;
+    }
+}
+
+@media only screen and (min-width:576px) and (max-width:767px) { /* S */
+    .TamSayfaCerceveAlaniIciAltiCizgiliBaslikAlani {
+        padding-bottom: 14px;
+    }
+}
+
+@media only screen and (max-width:574px) { /* XS */
+    .TamSayfaCerceveAlaniIciAltiCizgiliBaslikAlani {
+        padding-bottom: 12px;
+    }
+}
+
+.TamSayfaCerceveAlaniIciAltiCizgiliBaslikAlaniUstBaslikMetni {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #08C;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 600;
+    line-height: 120%;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaCerceveAlaniIciAltiCizgiliBaslikAlaniUstBaslikMetni {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaCerceveAlaniIciAltiCizgiliBaslikAlaniUstBaslikMetni {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width:991px) { /* M, S, XS */
+    .TamSayfaCerceveAlaniIciAltiCizgiliBaslikAlaniUstBaslikMetni {
+        font-size: 14px;
+    }
+}
+
+.TamSayfaCerceveAlaniIciAltiCizgiliBaslikAlaniAltBaslikMetni {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 120%;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaCerceveAlaniIciAltiCizgiliBaslikAlaniAltBaslikMetni {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaCerceveAlaniIciAltiCizgiliBaslikAlaniAltBaslikMetni {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width:991px) { /* M, S, XS */
+    .TamSayfaCerceveAlaniIciAltiCizgiliBaslikAlaniAltBaslikMetni {
+        font-size: 12px;
+    }
+}
+
+#TamSayfaCerceveAlaniIciBosVerilerIcinBilgiAlani {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: center;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    #TamSayfaCerceveAlaniIciBosVerilerIcinBilgiAlani {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    #TamSayfaCerceveAlaniIciBosVerilerIcinBilgiAlani {
+        padding-top: 9px;
+        padding-bottom: 9px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    #TamSayfaCerceveAlaniIciBosVerilerIcinBilgiAlani {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+}
+
+@media only screen and (min-width:576px) and (max-width:767px) { /* S */
+    #TamSayfaCerceveAlaniIciBosVerilerIcinBilgiAlani {
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+}
+
+@media only screen and (max-width:574px) { /* XS */
+    #TamSayfaCerceveAlaniIciBosVerilerIcinBilgiAlani {
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+}
+
+#TamSayfaCerceveAlaniIciBosVerilerIcinIslemIconuAlani {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: 100px;
+    min-height: 100px;
+    max-height: 100px;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    #TamSayfaCerceveAlaniIciBosVerilerIcinIslemIconuAlani {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    #TamSayfaCerceveAlaniIciBosVerilerIcinIslemIconuAlani {
+        margin-top: 35px;
+        margin-bottom: 18px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    #TamSayfaCerceveAlaniIciBosVerilerIcinIslemIconuAlani {
+        margin-top: 30px;
+        margin-bottom: 16px;
+    }
+}
+
+@media only screen and (min-width:576px) and (max-width:767px) { /* S */
+    #TamSayfaCerceveAlaniIciBosVerilerIcinIslemIconuAlani {
+        margin-top: 25px;
+        margin-bottom: 14px;
+    }
+}
+
+@media only screen and (max-width:574px) { /* XS */
+    #TamSayfaCerceveAlaniIciBosVerilerIcinIslemIconuAlani {
+        margin-top: 20px;
+        margin-bottom: 12px;
+    }
+}
+
+#TamSayfaCerceveAlaniIciBosVerilerIcinIslemIconuAlani img {
+    display: block;
+    width: 100px;
+    min-width: 100px;
+    max-width: 100px;
+    height: 100px;
+    min-height: 100px;
+    max-height: 100px;
+    margin: 0 auto;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+#TamSayfaCerceveAlaniIciBosVerilerIcinBaslikAlani {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 600;
+    line-height: 120%;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    #TamSayfaCerceveAlaniIciBosVerilerIcinBaslikAlani {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    #TamSayfaCerceveAlaniIciBosVerilerIcinBaslikAlani {
+        font-size: 13px;
+        margin-bottom: 18px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    #TamSayfaCerceveAlaniIciBosVerilerIcinBaslikAlani {
+        font-size: 12px;
+        margin-bottom: 16px;
+    }
+}
+
+@media only screen and (min-width:576px) and (max-width:767px) { /* S */
+    #TamSayfaCerceveAlaniIciBosVerilerIcinBaslikAlani {
+        font-size: 12px;
+        margin-bottom: 14px;
+    }
+}
+
+@media only screen and (max-width:574px) { /* XS */
+    #TamSayfaCerceveAlaniIciBosVerilerIcinBaslikAlani {
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+}
+
+#TamSayfaCerceveAlaniIciBosVerilerIcinIcerikAlani {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 120%;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    #TamSayfaCerceveAlaniIciBosVerilerIcinIcerikAlani {
+        font-size: 14px;
+        margin-bottom: 45px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    #TamSayfaCerceveAlaniIciBosVerilerIcinIcerikAlani {
+        font-size: 13px;
+        margin-bottom: 40px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    #TamSayfaCerceveAlaniIciBosVerilerIcinIcerikAlani {
+        font-size: 12px;
+        margin-bottom: 35px;
+    }
+}
+
+@media only screen and (min-width:576px) and (max-width:767px) { /* S */
+    #TamSayfaCerceveAlaniIciBosVerilerIcinIcerikAlani {
+        font-size: 12px;
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width:574px) { /* XS */
+    #TamSayfaCerceveAlaniIciBosVerilerIcinIcerikAlani {
+        font-size: 12px;
+        margin-bottom: 25px;
+    }
+}
+
+#TamSayfaCerceveAlaniIciBosVerilerIcinIcerikAlani a {
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+    #TamSayfaCerceveAlaniIciBosVerilerIcinIcerikAlani a:link, #TamSayfaCerceveAlaniIciBosVerilerIcinIcerikAlani a:active, #TamSayfaCerceveAlaniIciBosVerilerIcinIcerikAlani a:visited {
+        font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+        color: #646464;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: normal;
+        text-decoration: none;
+    }
+
+    #TamSayfaCerceveAlaniIciBosVerilerIcinIcerikAlani a:hover {
+        font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+        color: #08C;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: normal;
+        text-decoration: none;
+    }
+
+.TamSayfaCerceveAlaniIciFo rmElemanlariBaslikMetni {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 2px;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 120%;
+    text-decoration: none;
+    text-align: left;
+    vertical-align: top;
+}
+.TamSayfaCerceveAlaniIciFormElemanlariBaslikMetni {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 2px;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 120%;
+    text-decoration: none;
+    text-align: left;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaCerceveAlaniIciFormElemanlariBaslikMetni {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaCerceveAlaniIciFormElemanlariBaslikMetni {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width:991px) { /* M, S, XS */
+    .TamSayfaCerceveAlaniIciFormElemanlariBaslikMetni {
+        font-size: 12px;
+    }
+}
+
+.TamSayfaCerceveAlaniIciFormElemanlariSagaHizaliBaslikMetni {
+    position: absolute;
+    display: block;
+    float: right;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    top: 10px;
+    right: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 120%;
+    text-decoration: none;
+    text-align: left;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaCerceveAlaniIciFormElemanlariSagaHizaliBaslikMetni {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaCerceveAlaniIciFormElemanlariSagaHizaliBaslikMetni {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width:991px) { /* M, S, XS */
+    .TamSayfaCerceveAlaniIciFormElemanlariSagaHizaliBaslikMetni {
+        font-size: 12px;
+    }
+}
+
+.FormElemanlariYesilButonlar {
+    width: auto;
+    height: 30px;
+    min-height: 30px;
+    max-height: 30px;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 0;
+    padding-left: 25px;
+    padding-right: 25px;
+    cursor: pointer;
+    border: none;
+    border: 1px solid #4CAF50;
+    outline: none;
+    background-color: #08C;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #FFF;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 100%;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .FormElemanlariYesilButonlar {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .FormElemanlariYesilButonlar {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width:991px) { /* M, S, XS */
+    .FormElemanlariYesilButonlar {
+        font-size: 12px;
+    }
+}
+
+.FormElemanlariYesilButonlar:hover {
+    border: 1px solid #1B4C1D;
+}
+
+.FormElemanlariYesilButonlar:active {
+    border: 1px solid #4CAF50;
+    background-color: #1B4C1D;
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #08C;
+    color: white;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    padding: 15px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 25px;
+}
+
+    #myBtn:hover {
+        background-color: #555;
+    }
+
+#FooterMenulerAlani {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+    border-top: 1px solid #CCC;
+    outline: none;
+    background-color: #F9F9F9;
+    text-align: center;
+}
+
+#FooterMenulerSinirlamaAlani {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #F9F9F9;
+    text-align: center;
+    vertical-align: middle;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    #FooterMenulerSinirlamaAlani {
+        width: 1175px;
+        min-width: 1175px;
+        max-width: 1175px;
+    }
+}
+
+@media only screen and (max-width:1199px) { /* L, M, S, XS */
+    #FooterMenulerSinirlamaAlani {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
+
+.FooterMenuleriSutunlarAlani {
+    display: inline-block;
+    float: left;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    text-align: left;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .FooterMenuleriSutunlarAlani {
+        width: 25%;
+        min-width: 25%;
+        max-width: 25%;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .FooterMenuleriSutunlarAlani {
+        width: 25%;
+        min-width: 25%;
+        max-width: 25%;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    .FooterMenuleriSutunlarAlani {
+        width: 25%;
+        min-width: 25%;
+        max-width: 25%;
+    }
+}
+
+@media only screen and (min-width:576px) and (max-width:767px) { /* S */
+    .FooterMenuleriSutunlarAlani {
+        width: 50%;
+        min-width: 50%;
+        max-width: 50%;
+    }
+
+    .FooterMenuleriSutunlarTemizleAlani {
+        clear: both;
+    }
+}
+
+@media only screen and (max-width:574px) { /* XS */
+    .FooterMenuleriSutunlarAlani {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
+
+.FooterMenuleriSutunlariBaslikAlani {
+    display: block;
+    width: -webkit-calc(100% - 10px);
+    width: -moz-calc(100% - 10px);
+    width: -o-calc(100% - 10px);
+    width: -ms-calc(100% - 10px);
+    width: calc(100% - 10px);
+    min-width: -webkit-calc(100% - 10px);
+    min-width: -moz-calc(100% - 10px);
+    min-width: -o-calc(100% - 10px);
+    min-width: -ms-calc(100% - 10px);
+    min-width: calc(100% - 10px);
+    max-width: -webkit-calc(100% - 10px);
+    max-width: -moz-calc(100% - 10px);
+    max-width: -o-calc(100% - 10px);
+    max-width: -ms-calc(100% - 10px);
+    max-width: calc(100% - 10px);
+    height: auto;
+    margin: 0 auto;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    padding: 0;
+    padding-bottom: 5px;
+    overflow: hidden;
+    border: none;
+    border-bottom: 1px dashed #000;
+    outline: none;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #000;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .FooterMenuleriSutunlariBaslikAlani {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .FooterMenuleriSutunlariBaslikAlani {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    .FooterMenuleriSutunlariBaslikAlani {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width:576px) and (max-width:767px) { /* S */
+    .FooterMenuleriSutunlariBaslikAlani {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width:574px) { /* XS */
+    .FooterMenuleriSutunlariBaslikAlani {
+        font-size: 12px;
+    }
+}
+
+.FooterMenuleriSutunlariMenulerAlani {
+    display: block;
+    width: -webkit-calc(100% - 10px);
+    width: -moz-calc(100% - 10px);
+    width: -o-calc(100% - 10px);
+    width: -ms-calc(100% - 10px);
+    width: calc(100% - 10px);
+    min-width: -webkit-calc(100% - 10px);
+    min-width: -moz-calc(100% - 10px);
+    min-width: -o-calc(100% - 10px);
+    min-width: -ms-calc(100% - 10px);
+    min-width: calc(100% - 10px);
+    max-width: -webkit-calc(100% - 10px);
+    max-width: -moz-calc(100% - 10px);
+    max-width: -o-calc(100% - 10px);
+    max-width: -ms-calc(100% - 10px);
+    max-width: calc(100% - 10px);
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1.5;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .FooterMenuleriSutunlariMenulerAlani {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .FooterMenuleriSutunlariMenulerAlani {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    .FooterMenuleriSutunlariMenulerAlani {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width:576px) and (max-width:767px) { /* S */
+    .FooterMenuleriSutunlariMenulerAlani {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width:574px) { /* XS */
+    .FooterMenuleriSutunlariMenulerAlani {
+        font-size: 12px;
+    }
+}
+
+.FooterMenuleriSutunlariMenulerAlani a {
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+    .FooterMenuleriSutunlariMenulerAlani a:link, .FooterMenuleriSutunlariMenulerAlani a:active, .FooterMenuleriSutunlariMenulerAlani a:visited {
+        font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+        color: #646464;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: normal;
+        text-decoration: none;
+    }
+
+    .FooterMenuleriSutunlariMenulerAlani a:hover {
+        font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+        color: #000;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: normal;
+        text-decoration: underline;
+    }
+
+.FooterMenuleriSutunlariMenulerAlani img {
+    display: inline-block;
+    float: left;
+    width: 20px;
+    min-width: 16px;
+    max-width: 16px;
+    height: 16px;
+    min-height: 16px;
+    max-height: 16px;
+    margin: 0 auto;
+    padding: 0;
+    padding-right: 0px;
+    border: none;
+    outline: none;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .FooterMenuleriSutunlariMenulerAlani img {
+        padding-top: 2px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .FooterMenuleriSutunlariMenulerAlani img {
+        padding-top: 2px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    .FooterMenuleriSutunlariMenulerAlani img {
+        padding-top: 1px;
+    }
+}
+
+@media only screen and (min-width:576px) and (max-width:767px) { /* S */
+    .FooterMenuleriSutunlariMenulerAlani img {
+        padding-top: 1px;
+    }
+}
+
+@media only screen and (max-width:574px) { /* XS */
+    .FooterMenuleriSutunlariMenulerAlani img {
+        padding-top: 1px;
+    }
+}
+#FooterAltMetniAlani {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: center;
+}
+
+.FooterAltMetniSinirlamaAlani {
+    display: block;
+    width: -webkit-calc(100% - 10px);
+    width: -moz-calc(100% - 10px);
+    width: -o-calc(100% - 10px);
+    width: -ms-calc(100% - 10px);
+    width: calc(100% - 10px);
+    min-width: -webkit-calc(100% - 10px);
+    min-width: -moz-calc(100% - 10px);
+    min-width: -o-calc(100% - 10px);
+    min-width: -ms-calc(100% - 10px);
+    min-width: calc(100% - 10px);
+    max-width: -webkit-calc(100% - 10px);
+    max-width: -moz-calc(100% - 10px);
+    max-width: -o-calc(100% - 10px);
+    max-width: -ms-calc(100% - 10px);
+    max-width: calc(100% - 10px);
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    padding-right: 5px;
+    padding-left: 5px;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .FooterAltMetniSinirlamaAlani {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .FooterAltMetniSinirlamaAlani {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    .FooterAltMetniSinirlamaAlani {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width:576px) and (max-width:767px) { /* S */
+    .FooterAltMetniSinirlamaAlani {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width:574px) { /* XS */
+    .FooterAltMetniSinirlamaAlani {
+        font-size: 12px;
+    }
+}
+.addkarsilastir {
+    border: 5px solid lightgrey;
+}
+.addkarsilastir a{
+    color:lightgrey;
+    width:100%;
+    height:100%;
+}
+    .addkarsilastir a:hover {
+        color: #08C;
+    }
+.addkarsilastir:hover {
+    border: 5px solid #08C;
+}
+.columns a {
+    text-decoration: none;
+}
+.columns a:hover {
+    color: #08C
+}
+
+.FormElemanlariTextInputlari {
+    display: block;
+    float: left;
+    width: -webkit-calc(100% - 22px);
+    width: -moz-calc(100% - 22px);
+    width: -o-calc(100% - 22px);
+    width: -ms-calc(100% - 22px);
+    width: calc(100% - 22px);
+    min-width: -webkit-calc(100% - 22px);
+    min-width: -moz-calc(100% - 22px);
+    min-width: -o-calc(100% - 22px);
+    min-width: -ms-calc(100% - 22px);
+    min-width: calc(100% - 22px);
+    max-width: -webkit-calc(100% - 22px);
+    max-width: -moz-calc(100% - 22px);
+    max-width: -o-calc(100% - 22px);
+    max-width: -ms-calc(100% - 22px);
+    max-width: calc(100% - 22px);
+    height: 33px;
+    min-height: 33px;
+    max-height: 33px;
+    margin: 0 auto;
+    padding: 0;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: #FFF;
+    border: none;
+    border: 1px solid #CCC;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    outline: none;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 120%;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: middle;
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+}
+
+    .FormElemanlariTextInputlari:focus {
+        border: 1px solid #999;
+        -webkit-transition: all 500ms ease-in-out;
+        -moz-transition: all 500ms ease-in-out;
+        -o-transition: all 500ms ease-in-out;
+        -ms-transition: all 500ms ease-in-out;
+        transition: all 500ms ease-in-out;
+    }
+
+@media only screen and (min-width:1200px) { /* XL */
+    .FormElemanlariTextInputlari {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .FormElemanlariTextInputlari {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width:991px) { /* M, S, XS */
+    .FormElemanlariTextInputlari {
+        font-size: 12px;
+    }
+}
+#TamSayfaCerceveAlaniIciYuzdeEllilikSolAlan {
+    display: inline-block;
+    float: left;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: center;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    #TamSayfaCerceveAlaniIciYuzdeEllilikSolAlan {
+        width: -webkit-calc(50% - 10px);
+        width: -moz-calc(50% - 10px);
+        width: -o-calc(50% - 10px);
+        width: -ms-calc(50% - 10px);
+        width: calc(50% - 10px);
+        min-width: -webkit-calc(50% - 10px);
+        min-width: -moz-calc(50% - 10px);
+        min-width: -o-calc(50% - 10px);
+        min-width: -ms-calc(50% - 10px);
+        min-width: calc(50% - 10px);
+        max-width: -webkit-calc(50% - 10px);
+        max-width: -moz-calc(50% - 10px);
+        max-width: -o-calc(50% - 10px);
+        max-width: -ms-calc(50% - 10px);
+        max-width: calc(50% - 10px);
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    #TamSayfaCerceveAlaniIciYuzdeEllilikSolAlan {
+        width: -webkit-calc(50% - 9px);
+        width: -moz-calc(50% - 9px);
+        width: -o-calc(50% - 9px);
+        width: -ms-calc(50% - 9px);
+        width: calc(50% - 9px);
+        min-width: -webkit-calc(50% - 9px);
+        min-width: -moz-calc(50% - 9px);
+        min-width: -o-calc(50% - 9px);
+        min-width: -ms-calc(50% - 9px);
+        min-width: calc(50% - 9px);
+        max-width: -webkit-calc(50% - 9px);
+        max-width: -moz-calc(50% - 9px);
+        max-width: -o-calc(50% - 9px);
+        max-width: -ms-calc(50% - 9px);
+        max-width: calc(50% - 9px);
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    #TamSayfaCerceveAlaniIciYuzdeEllilikSolAlan {
+        width: -webkit-calc(50% - 8px);
+        width: -moz-calc(50% - 8px);
+        width: -o-calc(50% - 8px);
+        width: -ms-calc(50% - 8px);
+        width: calc(50% - 8px);
+        min-width: -webkit-calc(50% - 8px);
+        min-width: -moz-calc(50% - 8px);
+        min-width: -o-calc(50% - 8px);
+        min-width: -ms-calc(50% - 8px);
+        min-width: calc(50% - 8px);
+        max-width: -webkit-calc(50% - 8px);
+        max-width: -moz-calc(50% - 8px);
+        max-width: -o-calc(50% - 8px);
+        max-width: -ms-calc(50% - 8px);
+        max-width: calc(50% - 8px);
+    }
+}
+
+@media only screen and (min-width:576px) and (max-width:767px) { /* S */
+    #TamSayfaCerceveAlaniIciYuzdeEllilikSolAlan {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width:574px) { /* XS */
+    #TamSayfaCerceveAlaniIciYuzdeEllilikSolAlan {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
+
+#TamSayfaCerceveAlaniIciYuzdeEllilikSagAlan {
+    display: inline-block;
+    float: right;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: center;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    #TamSayfaCerceveAlaniIciYuzdeEllilikSagAlan {
+        width: -webkit-calc(50% - 10px);
+        width: -moz-calc(50% - 10px);
+        width: -o-calc(50% - 10px);
+        width: -ms-calc(50% - 10px);
+        width: calc(50% - 10px);
+        min-width: -webkit-calc(50% - 10px);
+        min-width: -moz-calc(50% - 10px);
+        min-width: -o-calc(50% - 10px);
+        min-width: -ms-calc(50% - 10px);
+        min-width: calc(50% - 10px);
+        max-width: -webkit-calc(50% - 10px);
+        max-width: -moz-calc(50% - 10px);
+        max-width: -o-calc(50% - 10px);
+        max-width: -ms-calc(50% - 10px);
+        max-width: calc(50% - 10px);
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    #TamSayfaCerceveAlaniIciYuzdeEllilikSagAlan {
+        width: -webkit-calc(50% - 9px);
+        width: -moz-calc(50% - 9px);
+        width: -o-calc(50% - 9px);
+        width: -ms-calc(50% - 9px);
+        width: calc(50% - 9px);
+        min-width: -webkit-calc(50% - 9px);
+        min-width: -moz-calc(50% - 9px);
+        min-width: -o-calc(50% - 9px);
+        min-width: -ms-calc(50% - 9px);
+        min-width: calc(50% - 9px);
+        max-width: -webkit-calc(50% - 9px);
+        max-width: -moz-calc(50% - 9px);
+        max-width: -o-calc(50% - 9px);
+        max-width: -ms-calc(50% - 9px);
+        max-width: calc(50% - 9px);
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    #TamSayfaCerceveAlaniIciYuzdeEllilikSagAlan {
+        width: -webkit-calc(50% - 8px);
+        width: -moz-calc(50% - 8px);
+        width: -o-calc(50% - 8px);
+        width: -ms-calc(50% - 8px);
+        width: calc(50% - 8px);
+        min-width: -webkit-calc(50% - 8px);
+        min-width: -moz-calc(50% - 8px);
+        min-width: -o-calc(50% - 8px);
+        min-width: -ms-calc(50% - 8px);
+        min-width: calc(50% - 8px);
+        max-width: -webkit-calc(50% - 8px);
+        max-width: -moz-calc(50% - 8px);
+        max-width: -o-calc(50% - 8px);
+        max-width: -ms-calc(50% - 8px);
+        max-width: calc(50% - 8px);
+    }
+}
+
+@media only screen and (min-width:576px) and (max-width:767px) { /* S */
+    #TamSayfaCerceveAlaniIciYuzdeEllilikSagAlan {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        padding-top: 20px;
+    }
+}
+
+@media only screen and (max-width:574px) { /* XS */
+    #TamSayfaCerceveAlaniIciYuzdeEllilikSagAlan {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        padding-top: 10px;
+    }
+}
+.CheckBoxlarveSecenekleriIcinKapsamaAlani {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+.CheckBoxveSeceneklerKapsamaAlani {
+    display: inline-block;
+    float: left;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 2px;
+    padding: 0;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    background-color: #FFF;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+.CheckBoxKapsamaAlani {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.FormElemanlariCheckBoxInputlari {
+    position: absolute;
+    visibility: hidden;
+}
+
+.CheckBoxIcinBicimlendirmeAlani {
+    display: inline-block;
+    float: left;
+    width: 16px;
+    min-width: 16px;
+    max-width: 16px;
+    height: 16px;
+    min-height: 16px;
+    max-height: 16px;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    border: 1px solid #CCC;
+    outline: none;
+    background-color: #FFF;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: top;
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+}
+
+.CheckBoxKapsamaAlani:hover > span.CheckBoxIcinBicimlendirmeAlani {
+    border: 1px solid #999;
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
+}
+
+.FormElemanlariCheckBoxInputlari:checked + span.CheckBoxIcinBicimlendirmeAlani {
+    border: 1px solid #999;
+    -webkit-box-shadow: inset 0 0 0 3px #FFF;
+    -moz-box-shadow: inset 0 0 0 3px #FFF;
+    -o-box-shadow: inset 0 0 0 3px #FFF;
+    -ms-box-shadow: inset 0 0 0 3px #FFF;
+    box-shadow: inset 0 0 0 3px #FFF;
+    background-color: #F90;
+}
+
+.CheckBoxYaniMetinAlani {
+    display: inline-block;
+    float: left;
+    margin: 0 auto;
+    padding: 0;
+    padding-left: 5px;
+    padding-right: 15px;
+    background-color: #FFF;
+    border: none;
+    outline: none;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 120%;
+    text-align: left;
+    text-decoration: none;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .CheckBoxYaniMetinAlani {
+        font-size: 14px;
+        margin-top: 1px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .CheckBoxYaniMetinAlani {
+        font-size: 13px;
+        margin-top: 2px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) { /* M */
+    .CheckBoxYaniMetinAlani {
+        font-size: 12px;
+        margin-top: 2px;
+    }
+}
+
+@media only screen and (min-width:576px) and (max-width:767px) { /* S */
+    .CheckBoxYaniMetinAlani {
+        font-size: 12px;
+        margin-top: 2px;
+    }
+}
+
+@media only screen and (max-width:574px) { /* XS */
+    .CheckBoxYaniMetinAlani {
+        font-size: 12px;
+        margin-top: 2px;
+    }
+}
+
+.CheckBoxYaniMetinAlani a {
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+    .CheckBoxYaniMetinAlani a:link, .CheckBoxYaniMetinAlani a:active, .CheckBoxYaniMetinAlani a:visited {
+        font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+        color: #646464;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: normal;
+        text-decoration: none;
+    }
+
+    .CheckBoxYaniMetinAlani a:hover {
+        font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+        color: #646464;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: normal;
+        text-decoration: none;
+    }
+.TamSayfaCerceveAlaniIciBilgiParagraflariKapsamaAlani {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 10px;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 120%;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaCerceveAlaniIciBilgiParagraflariKapsamaAlani {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaCerceveAlaniIciBilgiParagraflariKapsamaAlani {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width:991px) { /* M, S, XS */
+    .TamSayfaCerceveAlaniIciBilgiParagraflariKapsamaAlani {
+        font-size: 12px;
+    }
+}
+
+.TamSayfaCerceveAlaniIciBilgiParagraflariResimliBaslikMetniAlani {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+    .TamSayfaCerceveAlaniIciBilgiParagraflariResimliBaslikMetniAlani img {
+        display: inline-block;
+        float: left;
+        width: 20px;
+        min-width: 20px;
+        max-width: 20px;
+        height: 20px;
+        min-height: 20px;
+        max-height: 20px;
+        margin: 0 auto;
+        margin-right: 10px;
+        padding: 0;
+        border: none;
+        outline: none;
+    }
+
+.TamSayfaCerceveAlaniIciBilgiParagraflariResimliBaslikMetni {
+    display: inline-block;
+    float: left;
+    width: -webkit-calc(100% - 30px);
+    width: -moz-calc(100% - 30px);
+    width: -o-calc(100% - 30px);
+    width: -ms-calc(100% - 30px);
+    width: calc(100% - 30px);
+    min-width: -webkit-calc(100% - 30px);
+    min-width: -moz-calc(100% - 30px);
+    min-width: -o-calc(100% - 30px);
+    min-width: -ms-calc(100% - 30px);
+    min-width: calc(100% - 30px);
+    max-width: -webkit-calc(100% - 30px);
+    max-width: -moz-calc(100% - 30px);
+    max-width: -o-calc(100% - 30px);
+    max-width: -ms-calc(100% - 30px);
+    max-width: calc(100% - 30px);
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #08C;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 600;
+    line-height: 120%;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaCerceveAlaniIciBilgiParagraflariResimliBaslikMetni {
+        font-size: 14px;
+        margin-top: 2px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaCerceveAlaniIciBilgiParagraflariResimliBaslikMetni {
+        font-size: 13px;
+        margin-top: 3px;
+    }
+}
+
+@media only screen and (max-width:991px) { /* M, S, XS */
+    .TamSayfaCerceveAlaniIciBilgiParagraflariResimliBaslikMetni {
+        font-size: 12px;
+        margin-top: 3px;
+    }
+}
+
+.TamSayfaCerceveAlaniIciBilgiParagraflariAciklamaMetni {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 10px;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 125%;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaCerceveAlaniIciBilgiParagraflariAciklamaMetni {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaCerceveAlaniIciBilgiParagraflariAciklamaMetni {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width:991px) { /* M, S, XS */
+    .TamSayfaCerceveAlaniIciBilgiParagraflariAciklamaMetni {
+        font-size: 12px;
+    }
+}
+
+.TamSayfaCerceveAlaniIciBayilerAlani {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaCerceveAlaniIciBayilerAlani {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaCerceveAlaniIciBayilerAlani {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width:991px) { /* M, S, XS */
+    .TamSayfaCerceveAlaniIciBayilerAlani {
+        font-size: 12px;
+    }
+}
+
+.TamSayfaCerceveAlaniIciBayilerBaslikMetni {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 10px;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #08A;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 600;
+    line-height: 120%;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaCerceveAlaniIciBayilerBaslikMetni {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaCerceveAlaniIciBayilerBaslikMetni {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width:991px) { /* M, S, XS */
+    .TamSayfaCerceveAlaniIciBayilerBaslikMetni {
+        font-size: 12px;
+    }
+}
+
+.TamSayfaCerceveAlaniIciBayilerBilgiMetni {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: hidden;
+    border: none;
+    border-bottom: 1px dashed #CCC;
+    outline: none;
+    background-color: #FFF;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 125%;
+    text-align: left;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaCerceveAlaniIciBayilerBilgiMetni {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaCerceveAlaniIciBayilerBilgiMetni {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width:991px) { /* M, S, XS */
+    .TamSayfaCerceveAlaniIciBayilerBilgiMetni {
+        font-size: 12px;
+    }
+}
+.TamSayfaCerceveAlaniIciUyeliBilgileriSayfasiKayitBasliklariMetni {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 10px;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background-color: #FFF;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 600;
+    line-height: 120%;
+    text-decoration: none;
+    text-align: left;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaCerceveAlaniIciUyeliBilgileriSayfasiKayitBasliklariMetni {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaCerceveAlaniIciUyeliBilgileriSayfasiKayitBasliklariMetni {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width:991px) { /* M, S, XS */
+    .TamSayfaCerceveAlaniIciUyeliBilgileriSayfasiKayitBasliklariMetni {
+        font-size: 12px;
+    }
+}
+
+.TamSayfaCerceveAlaniIciUyeliBilgileriSayfasiKayitIcerikleriMetni {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    overflow: hidden;
+    border: none;
+    border-bottom: 1px dashed #CCC;
+    outline: none;
+    background-color: #FFF;
+    font-family: Arial, "Helvatica Neue", Helvatica, sans-serif;
+    color: #646464;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 120%;
+    text-decoration: none;
+    text-align: left;
+    vertical-align: top;
+}
+
+@media only screen and (min-width:1200px) { /* XL */
+    .TamSayfaCerceveAlaniIciUyeliBilgileriSayfasiKayitIcerikleriMetni {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) { /* L */
+    .TamSayfaCerceveAlaniIciUyeliBilgileriSayfasiKayitIcerikleriMetni {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width:991px) { /* M, S, XS */
+    .TamSayfaCerceveAlaniIciUyeliBilgileriSayfasiKayitIcerikleriMetni {
+        font-size: 12px;
+    }
+}

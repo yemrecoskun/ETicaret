@@ -1,0 +1,36 @@
+﻿@using WebApplication1.Service;
+@{
+    Service servis = new Service();
+    ViewBag.Title = "UrunCikar";
+    Layout = "~/Views/Shared/adminlayout.cshtml";
+}
+
+<html>
+<head>
+
+</head>
+<body>
+    <div style="padding:0 16px;">
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Ürün İd veya Ürün Adı ARA..." title="Type in a name">
+
+        <table id="myTable">
+            <tr class="header">
+                <th>Ürün ID</th>
+                <th>Ürün Resim</th>
+                <th>Ürün İsmi</th>
+                <th></th>
+            </tr>
+            @foreach (var item in servis.Urun_Sorgula())
+            {
+                <tr id="@item.Key.urun_id">
+                    <td>@item.Key.urun_id</td>
+                    <td><img src="@Url.Content(item.Key.urun_resim)" style="width:75px;height:75px" /></td>
+                    <td>@item.Key.urun_markaadi  @item.Key.urun_modeladi</td>
+                    <td><button class="sil" type="button" onclick="silurun(@item.Key.urun_id)">SİL</button></td>
+                </tr>
+            }
+        </table>
+        <br />
+    </div>
+</body>
+</html>
