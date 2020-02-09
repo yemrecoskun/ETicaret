@@ -9,9 +9,9 @@
     -HTML, CSS, JS, C#, SQL 
 ## Kullanım Şekli
 - Projemize Kullanıcıadı: "root", Şifre: "admin" şekilde giriş yaptığımızda admin olarak giriş yapılarak admin paneli açılır.
-  -Admin panelinde ürün ekleme,çıkarma,listeleme, ürün özellik ekleme,çıkarma,listeleme, stok bilgileri gibi işlemler yapılır.
+  - Admin panelinde ürün ekleme,çıkarma,listeleme, ürün özellik ekleme,çıkarma,listeleme, stok bilgileri gibi işlemler yapılır.
 - Projemizde diğer kullanıcılar üye olabilir.
-  -Ürün inceleme, sepete ekleme, karşılaştırma, satın alma, ödeme, ürünü puanla ve yorumla gibi tüm işlemleri yapabilir.
+  - Ürün inceleme, sepete ekleme, karşılaştırma, satın alma, ödeme, ürünü puanla ve yorumla gibi tüm işlemleri yapabilir.
 
   
 ## Projemizle ilgili ayrıntılı tüm bilgileri [rapor](https://github.com/yemrecoskun/ETicaret/blob/master/Rapor.pdf) ' dan inceleyebilirsiniz.
