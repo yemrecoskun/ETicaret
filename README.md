@@ -6,7 +6,7 @@
 - MYSQL WORKBENCH 
 - KATMANLI PROTOKOL MİMARİSİ 
 - Kullanılan Diller:
-    -HTML, CSS, JS, C#, SQL 
+    - HTML, CSS, JS, C#, SQL 
 ## Kullanım Şekli
 - Projemize Kullanıcıadı: "root", Şifre: "admin" şekilde giriş yaptığımızda admin olarak giriş yapılarak admin paneli açılır.
   - Admin panelinde ürün ekleme,çıkarma,listeleme, ürün özellik ekleme,çıkarma,listeleme, stok bilgileri gibi işlemler yapılır.
