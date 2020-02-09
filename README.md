@@ -1,3 +1,4 @@
+# English Readme : [README-EN.MD](https://github.com/yemrecoskun/ETicaret/blob/master/README-EN.md)
 # ETicaret
 ## Projemizin amacı;
   Projemizin amacı tüm ürün,marka ve modellerinin en uygununu bize gösteren ve bunları birbirleriyle karşılaştırmamıza imkan sunup hangisini satın alıncağı konusunda bizlere fikir/beyan sunan bir e-ticaret sitesidir. Ürünlerin karşılaştırılmasında ürünlere verilen puanlar,fiyatlar ve tüm özellikleri birbirine kıyaslar. Projemizi bilgisayara ihtiyacı olan her müşteri alışverişini yapabilmektedir.
